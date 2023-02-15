@@ -1,7 +1,14 @@
+#home-welcome-section-welcome-to-heading {
+  font-family: Segoe Print;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 39px;
+  letter-spacing: 0em;
+}
 
 #home-welcome-section-partystore-heading {
   font-family: Georgia;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 41px;
   letter-spacing: 0em;
@@ -58,4 +65,171 @@
   letter-spacing: 0em;
   text-align: center;
   margin-top: 10px;
+}
+
+#home-explore-section-main-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#home-explore-section-content-wrap {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  width: 43%;
+}
+
+#home-explore-section-content-sub-wrap {
+  font-family: Georgia;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+#home-explore-section-content-sub-wrap > :nth-child(1) {
+  color: #8dc8ae;
+}
+
+#home-explore-section-content-sub-wrap > :nth-child(2) {
+  color: #242424;
+}
+
+#home-explore-section-content-sub-wrap > :nth-child(3) {
+  color: #f37647;
+}
+
+#home-explore-section-content-sub-wrap > :nth-child(4) {
+  color: #242424;
+}
+
+#home-explore-section-content-description {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 10px;
+}
+
+#home-explore-section-content-button {
+  padding: 8px;
+  width: 40%;
+  font-family: Georgia;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  color: #cc0000;
+  background: #fea6a6;
+  border: none;
+  margin-top: 90px;
+}
+
+#home-explore-section-content-button-wrap{
+  text-align: left;
+}
+
+#home-explore-section-video-wrap{
+  width: 50%;
+}
+
+#home-explore-section-video-wrap>img{
+  width: 100%;
+  height:100%;
+  object-fit: contain;
+}
+
+#home-explore-section-content-button:hover{
+  scale: 1.05;
+  cursor: pointer;
+}
+
+#home-products-and-packages-take-a-look-at-heading{
+    font-family: Segoe Print;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 39px;
+  letter-spacing: 0em;
+}
+
+#home-products-and-packages-heading > :nth-child(1) {
+  color: #8dc8ae;
+}
+
+#home-products-and-packages-heading > :nth-child(2) {
+  color: #242424;
+}
+
+#home-products-and-packages-heading > :nth-child(3) {
+  color: #f37647;
+}
+
+#home-products-and-packages-heading{
+  font-family: Georgia;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: 0em;
+}
+
+#home-products-and-packages-sub-heading{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+  font-family: Georgia;
+font-size: 16px;
+font-weight: 700;
+line-height: 25px;
+letter-spacing: 0em;
+}
+
+.home-products-and-packages-sub-heading-logos{
+  width: 20%;
+}
+
+.home-products-and-packages-sub-heading-logos>img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.home-products-and-packages-sub-heading-logo-wrap{
+  display: flex;
+  justify-content: space-evenly;
+  width: 19%;
+}
+
+.home-products-and-packages-sub-heading-logo-wrap>:nth-child(2){
+  padding-top: 15px;
+}
+
+#home-products-and-packages-sub-heading>:nth-child(1){
+  padding-top: 15px;
+}
+
+#home-products-and-packages-content-grid-wrap{
+  display: grid;
+    grid-template-columns: repeat(4, 20.6%);
+  gap: 30px;
+  grid-auto-rows: minmax(100px, auto);
+justify-content: center;
+margin-top: 30px;
+}
+
+.home-products-and-packages-content-grid{
+  border: 1px solid black;
+}
+
+.home-products-and-packages-content-grid-image-wrap{
+ width: 100%;
+ height: 60%;
+}
+.home-products-and-packages-content-grid-image-wrap>img{
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
