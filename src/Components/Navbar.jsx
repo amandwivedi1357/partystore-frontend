@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <div id="navbar-main-wrapper">
       <div id="navbar-logo-wrap">
-        <img src="./logo.jpeg" alt="" id="navbar-logo-image" />
+        <img src="./logo.png" alt="" id="navbar-logo-image" />
       </div>
       <div className="navbar-elements">Themes</div>
       <div className="navbar-elements">Party Supplies</div>
