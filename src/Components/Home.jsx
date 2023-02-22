@@ -120,7 +120,9 @@ export const Home = () => {
             <div className="home-products-and-packages-content-grid-titles">
               Balloons
             </div>
-            <div>Solid color, Chrome, striped and many more</div>
+            <div className="home-products-and-packages-content-grid-description">
+              Solid color, Chrome, striped and many more
+            </div>
           </div>
 
           <div className="home-products-and-packages-content-grid">
@@ -130,7 +132,9 @@ export const Home = () => {
             <div className="home-products-and-packages-content-grid-titles">
               Cake decorations
             </div>
-            <div>Cake toppers, candles and many more</div>
+            <div className="home-products-and-packages-content-grid-description">
+              Cake toppers, candles and many more
+            </div>
           </div>
 
           <div className="home-products-and-packages-content-grid">
@@ -140,7 +144,9 @@ export const Home = () => {
             <div className="home-products-and-packages-content-grid-titles">
               Christmas decorations
             </div>
-            <div>Tree decorations, reindeer figurines and many more</div>
+            <div className="home-products-and-packages-content-grid-description">
+              Tree decorations, reindeer figurines and many more
+            </div>
           </div>
 
           <div className="home-products-and-packages-content-grid">
@@ -150,7 +156,9 @@ export const Home = () => {
             <div className="home-products-and-packages-content-grid-titles">
               Paper decorations
             </div>
-            <div>Paper ribbons, paper flowers and many more</div>
+            <div className="home-products-and-packages-content-grid-description">
+              Paper ribbons, paper flowers and many more
+            </div>
           </div>
 
           <div className="home-products-and-packages-content-grid">
@@ -160,7 +168,9 @@ export const Home = () => {
             <div className="home-products-and-packages-content-grid-titles">
               Banners
             </div>
-            <div>Birthday banners, Anniversary banners and many more</div>
+            <div className="home-products-and-packages-content-grid-description">
+              Birthday banners, Anniversary banners and many more
+            </div>
           </div>
 
           <div className="home-products-and-packages-content-grid">
@@ -170,7 +180,9 @@ export const Home = () => {
             <div className="home-products-and-packages-content-grid-titles">
               Foil themes
             </div>
-            <div>Description</div>
+            <div className="home-products-and-packages-content-grid-description">
+              Description
+            </div>
           </div>
 
           <div className="home-products-and-packages-content-grid">
@@ -180,7 +192,9 @@ export const Home = () => {
             <div className="home-products-and-packages-content-grid-titles">
               LED decorations
             </div>
-            <div>Led lights, diyas and many more</div>
+            <div className="home-products-and-packages-content-grid-description">
+              Led lights, diyas and many more
+            </div>
           </div>
 
           <div className="home-products-and-packages-content-grid">
@@ -188,7 +202,9 @@ export const Home = () => {
               <img src="./partystore.jpg" alt="" />
             </div>
             <div>Gift packing</div>
-            <div>Gift wrappers, color ribbonsand many more</div>
+            <div className="home-products-and-packages-content-grid-description">
+              Gift wrappers, color ribbonsand many more
+            </div>
           </div>
         </div>
       </div>
