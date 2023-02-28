@@ -1,0 +1,111 @@
+#homepage-packages-and-banner-wrap {
+  background: linear-gradient(90deg, #000092 0%, #ff00f3 90.02%);
+  background-blend-mode: normal;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+#homepage-banner-wrap {
+  width: 65%;
+  height: 450px;
+}
+
+#homepage-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#homepage-packages-wrap {
+  width: 25%;
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-left: 65px;
+}
+
+#homepage-packages-list-ul {
+  list-style: none;
+  margin-top: 0px;
+  text-align: left;
+  padding-left: 00px;
+  padding-right: 00px;
+  margin-bottom: 0px;
+}
+
+#homepage-packages-list-ul > li {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.001em;
+  color: #ffffff;
+  padding: 10px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.42);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#homepage-packages-list-ul > :nth-child(1) {
+  background: #560898;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 20px;
+  border: none;
+}
+
+#homepage-packages-list-ul > :nth-child(10) {
+  border: none;
+}
+
+#homepage-offer-statement-section-wrap {
+  width: 100%;
+  height: 146px;
+  margin-top: 10px;
+}
+
+#homepage-offer-statement-section-wrap > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.homepage-offer-statement-section-text-contents {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.015em;
+  color: #680f5f;
+  text-align: left;
+}
+
+#homepage-offer-statement-section-offer-text-content {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0.001em;
+  color: #ffffff;
+}
+
+#homepage-offer-statement-section-text {
+  position: absolute;
+  top: 770px;
+  left: 180px;
+}
+
+#homepage-what-are-you-celeb-title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.015em;
+}
+
+#homepage-what-are-you-celeb-sub-title{
+font-size: 20px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0.015em;
+}
