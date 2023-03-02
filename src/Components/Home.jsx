@@ -10,7 +10,7 @@ import Stack from "@mui/material/Stack";
 export const Home = () => {
 
 var slider01_settings = {
-  className: "home-what-are-you-celeb-slider-sub-wrap",
+  className: "homepage-slider01-slider02-slider-component",
   dots: false,
   infinite: true,
   speed: 500,
@@ -21,11 +21,22 @@ var slider01_settings = {
 };
 
 var slider02_settings = {
-  className: "home-what-are-you-celeb-slider-sub-wrap",
+  className: "homepage-slider01-slider02-slider-component",
   dots: false,
   infinite: true,
   speed: 500,
   slidesToShow: 4,
+  slidesToScroll: 2,
+  arrows: true,
+  variableWidth: true,
+};
+
+var slider03_settings = {
+  className:"homepage-themes-section-slider-component",
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
   slidesToScroll: 2,
   arrows: true,
   variableWidth: true,
@@ -374,10 +385,739 @@ var slider02_settings = {
           <div id="homepage-second-offer-statement-section-offer02-text01">
             All your party need one place
           </div>
-          <div id="homepage-second-offer-statement-section-offer02-text02">Get up to 25% OFF</div>
+          <div id="homepage-second-offer-statement-section-offer02-text02">
+            Get up to 25% OFF
+          </div>
         </div>
       </div>
       {/* second offer statement section ends here */}
+
+      {/* around the world decoration section starts here */}
+
+      <div className="homepage-themes-section-wrap">
+        <div className="homepage-themes-section-title">
+          Around the world decoration
+        </div>
+
+        <div id="homepage-around-the-world-section-slider-wrap">
+          <Slider {...slider03_settings}>
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod01.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod02.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Zack theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod03.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Around the world theme
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod04.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+          </Slider>
+        </div>
+      </div>
+      {/* around the world decoration section ends here */}
+
+      {/* office in house decor section starts here */}
+
+      <div className="homepage-themes-section-wrap">
+        <div className="homepage-themes-section-title">
+          Office in house decor
+        </div>
+
+        <div id="homepage-office-in-house-decor-section-slider-wrap">
+          <Slider {...slider03_settings}>
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod01.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod02.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Zack theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod03.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Around the world theme
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod04.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+          </Slider>
+        </div>
+      </div>
+
+      {/* office in house decor section ends here */}
+
+      {/* wedding anniversary section starts here */}
+
+      <div className="homepage-themes-section-wrap">
+        <div className="homepage-themes-section-title">Wedding Anniversary</div>
+
+        <div id="homepage-wedding-anniversary-section-slider-wrap">
+          <Slider {...slider03_settings}>
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod01.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod02.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Zack theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod03.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Around the world theme
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod04.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+          </Slider>
+        </div>
+      </div>
+
+      {/* wedding anniversary section ends here */}
+
+      {/* Baby Arrival section starts here */}
+
+      <div className="homepage-themes-section-wrap">
+        <div className="homepage-themes-section-title">Baby Arrival</div>
+
+        <div id="homepage-baby-arrival-section-slider-wrap">
+          <Slider {...slider03_settings}>
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod01.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod02.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Zack theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod03.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Around the world theme
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod04.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+          </Slider>
+        </div>
+      </div>
+
+      {/* Baby Arrival section ends here */}
+
+      {/* Showroom Inaugration section starts here */}
+
+      <div className="homepage-themes-section-wrap">
+        <div className="homepage-themes-section-title">
+          Showroom Inaugration
+        </div>
+
+        <div id="homepage-showroom-inaugration-section-slider-wrap">
+          <Slider {...slider03_settings}>
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod01.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod02.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Zack theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod03.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Around the world theme
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod04.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+          </Slider>
+        </div>
+      </div>
+
+      {/* Showroom Inaugration section ends here */}
+
+      {/* House Warming section starts here */}
+
+      <div className="homepage-themes-section-wrap">
+        <div className="homepage-themes-section-title">
+          House Warming
+        </div>
+
+        <div id="homepage-house-warming-section-slider-wrap">
+          <Slider {...slider03_settings}>
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod01.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod02.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Zack theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod03.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Around the world theme
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+
+            <div className="homepage-themes-section-slider-slide">
+              <div className="homepage-themes-section-slide-img-wrap">
+                <img
+                  src="./Home-img/home-slider03-prod04.jpeg"
+                  alt=""
+                  className="homepage-themes-section-slide-img"
+                />
+              </div>
+
+              <div className="homepage-themes-section-slide-title-rating-wrap">
+                <div className="homepage-themes-section-slide-title">
+                  Airport theme decoration
+                </div>
+                <div className="homepage-themes-section-slide-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+              </div>
+
+              <div className="homepage-themes-section-slide-price-wrap">
+                <div>MRP</div>
+                <div>₹</div>
+                <div>2000</div>
+              </div>
+            </div>
+          </Slider>
+        </div>
+      </div>
+
+      {/* Showroom Inaugration section ends here */}
     </div>
   );
 };

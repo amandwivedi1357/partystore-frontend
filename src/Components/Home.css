@@ -192,7 +192,7 @@
   color: black !important;
 }
 
-.slick-slide {
+.homepage-slider01-slider02-slider-component > .slick-list > div > div {
   width: 240px;
   margin-left: 15px;
 }
@@ -200,7 +200,7 @@
 #homepage-the-party-store-section-wrap {
   background: #ffd401;
   padding-top: 39px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 }
 
 #homepage-the-party-store-section-headline {
@@ -335,8 +335,7 @@
   display: flex;
   width: 90%;
   margin: auto;
-  margin-top: 30px;
-   margin-bottom: 20px;
+  margin-top: 35px;
   justify-content: space-between;
   /* border: 1px solid red; */
 }
@@ -366,7 +365,7 @@
   line-height: 36px;
   letter-spacing: 0.015em;
   margin-top: 35px;
-   margin-left: 120px;
+  margin-left: 120px;
 }
 
 #homepage-second-offer-statement-section-offer02-text02 {
@@ -376,4 +375,120 @@
   letter-spacing: 0.001em;
   color: #ac0475;
   margin-right: 10px;
+}
+
+.homepage-themes-section-wrap {
+  background: rgba(255, 212, 1, 0.31);
+  padding-top: 36px;
+  padding-bottom: 36px;
+  margin-top: 30px;
+}
+
+.homepage-themes-section-title {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 39px;
+  letter-spacing: 0.015em;
+  text-align: left;
+  padding-left: 75px;
+}
+
+#homepage-around-the-world-section-slider-wrap {
+  width: 89%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.homepage-themes-section-slider-slide {
+  width: 250px;
+  padding-bottom: 10px;
+}
+
+.homepage-themes-section-slide-img-wrap {
+  height: 150px;
+  padding: 5px;
+}
+
+.homepage-themes-section-slide-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.homepage-themes-section-slider-component {
+  width: 100%;
+  margin: auto;
+}
+
+.homepage-themes-section-slider-component > .slick-list > div > div {
+  width: 6%;
+  box-sizing: border-box;
+  margin-left: 20px;
+  background: #ffffff;
+  border: 0.5px solid lightgrey;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.homepage-themes-section-slide-title-rating-wrap {
+  display: flex;
+}
+
+.homepage-themes-section-slide-title {
+  width: 70%;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 27px;
+  letter-spacing: 0.015em;
+  text-align: left;
+  color: black;
+  padding-left: 10px;
+}
+
+.homepage-themes-section-slide-rating {
+  padding-top: 5px;
+}
+
+.homepage-themes-section-slide-price-wrap {
+  font-family: Nunito;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 7px;
+  display: flex;
+  width: 28%;
+  justify-content: space-evenly;
+}
+
+#homepage-office-in-house-decor-section-slider-wrap {
+  width: 89%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+#homepage-wedding-anniversary-section-slider-wrap {
+  width: 89%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+#homepage-baby-arrival-section-slider-wrap {
+  width: 89%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+#homepage-showroom-inaugration-section-slider-wrap{
+  width: 89%;
+  margin: auto;
+  margin-top: 25px;
+}
+
+#homepage-house-warming-section-slider-wrap{
+  width: 89%;
+  margin: auto;
+  margin-top: 25px;
 }
