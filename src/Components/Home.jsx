@@ -42,6 +42,17 @@ var slider03_settings = {
   variableWidth: true,
 };
 
+var slider04_settings = {
+  className: "homepage-testimonial-section-slider-component",
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  variableWidth: true,
+};
+
   return (
     <div id="homepage-main-wrapper">
       {/* Banner section starts here */}
@@ -1000,9 +1011,7 @@ var slider03_settings = {
       {/* House Warming section starts here */}
 
       <div className="homepage-themes-section-wrap">
-        <div className="homepage-themes-section-title">
-          House Warming
-        </div>
+        <div className="homepage-themes-section-title">House Warming</div>
 
         <div id="homepage-house-warming-section-slider-wrap">
           <Slider {...slider03_settings}>
@@ -1118,6 +1127,48 @@ var slider03_settings = {
       </div>
 
       {/* Showroom Inaugration section ends here */}
+
+      {/* testimonial section starts here */}
+
+      <div id="homepage-testimonial-section-slider-wrap">
+        <Slider {...slider04_settings}>
+          <div id="homepage-testimonial-section-slide-client-01">
+            <div id="homepage-testimonial-section-slide-client-01-heading">
+              Our happy clients
+            </div>
+            <div id="homepage-testimonial-section-slide-client-01-sub-heading">
+              They are talking about Us{" "}
+            </div>
+
+            <div className="homepage-testimonial-section-slide-client-details-wrap">
+              <div className="homepage-testimonial-section-slide-client-details">
+                <div className="homepage-testimonial-section-slide-client-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+                <div className="homepage-testimonial-section-slide-client-title">
+                  “Lorem ipsum dolor sit”
+                </div>
+                <div className="homepage-testimonial-section-slide-client-description">
+                  Lorem ipsum dolor sit amet consectetur. Non eget nibh{" "}
+                </div>
+              </div>
+
+              <div className="homepage-testimonial-section-slide-client-img-wrap">
+                <img
+                  src="./Home-img/home-testimonial-client.png"
+                  alt=""
+                  className="homepage-testimonial-section-slide-client-img"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="homepage-testimonial-section-slide-client-01"></div>
+        </Slider>
+      </div>
+
+      {/* testimonial section ends here */}
     </div>
   );
 };
