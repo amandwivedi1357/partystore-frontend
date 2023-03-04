@@ -187,10 +187,10 @@
   border-radius: 5px;
 }
 
-.slick-prev:before,
+/* .slick-prev:before,
 .slick-next:before {
   color: black !important;
-}
+} */
 
 .homepage-slider01-slider02-slider-component > .slick-list > div > div {
   width: 240px;
@@ -500,13 +500,14 @@
 #homepage-testimonial-section-slider-wrap {
   width: 99.8%;
   margin: auto;
+  margin-top: 25px;
 }
 
-#homepage-testimonial-section-slide-client-01 {
+.homepage-testimonial-section-slide-client-wrap {
   background: url("../bg-img/home-testimonial-bg.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
-  /* border: 1px solid yellow; */
+  /* border: 1px solid red; */
   height: 563px;
   background-position: center;
 }
@@ -516,80 +517,202 @@
   width: 1400px;
 }
 
-#homepage-testimonial-section-slide-client-01-heading {
+.homepage-testimonial-section-slide-client-heading {
   font-size: 32px;
   font-weight: 500;
   line-height: 48px;
   letter-spacing: 0.015em;
   text-align: left;
   color: #fff;
-  padding-left: 105px;
-  margin-top: 74px;
+  padding-left: 65px;
+  margin-top: 50px;
 }
 
-#homepage-testimonial-section-slide-client-01-sub-heading {
+.homepage-testimonial-section-slide-client-sub-heading {
   font-size: 20px;
   font-weight: 500;
   line-height: 48px;
   letter-spacing: 0.015em;
   text-align: left;
   color: #fff;
-  padding-left: 105px;
+  padding-left: 65px;
 }
 
-.homepage-testimonial-section-slide-client-rating{
+.homepage-testimonial-section-slide-client-rating {
   width: max-content;
 }
 
-.homepage-testimonial-section-slide-client-title{
+.homepage-testimonial-section-slide-client-title {
   text-align: left;
   width: max-content;
-font-size: 16px;
-font-weight: 600;
-line-height: 36px;
-letter-spacing: 0.015em;
-color: #fff;
-margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0.015em;
+  color: #fff;
+  margin-top: 15px;
 }
 
-.homepage-testimonial-section-slide-client-description{
-font-size: 14px;
-font-weight: 400;
-line-height: 30px;
-letter-spacing: 0.015em;
-text-align: left;
-color: #fff;
-margin-top: 10px;
+.homepage-testimonial-section-slide-client-description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.015em;
+  text-align: left;
+  color: #fff;
+  margin-top: 10px;
 }
 
-.homepage-testimonial-section-slide-client-img-wrap{
+.homepage-testimonial-section-slide-client-img-wrap {
   width: 28%;
 }
 
-.homepage-testimonial-section-slide-client-img{
+.homepage-testimonial-section-slide-client-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.homepage-testimonial-section-slide-client-details-wrap{
+.homepage-testimonial-section-slide-client-details-wrap {
   display: flex;
   width: 35%;
   padding-top: 50px;
   padding-bottom: 50px;
   background: rgba(93, 1, 12, 0.2);
-border: 1px solid rgba(255, 255, 255, 0.25);
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
-margin-left: 105px;
-justify-content: space-around;
-margin-top: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin-left: 65px;
+  justify-content: space-around;
+  margin-top: 50px;
 }
 
-.homepage-testimonial-section-slide-client-details{
-  width:50%;
+.homepage-testimonial-section-slide-client-details {
+  width: 50%;
 }
 
+.slick-next:before,
+.slick-prev:before {
+  font-size: 25px !important;
+  line-height: 1 !important;
+  opacity: 0.75 !important;
+  color: #000 !important;
+}
 
+.slick-dots > li > button:before {
+  font-size: 15px !important;
+  color: #000 !important;
+  margin-top: -50px;
+  opacity: 0.6 !important;
+}
 
+.slick-dots li.slick-active button:before {
+  color: white !important;
+  opacity: 1 !important;
+}
+
+#homepage-celeb-moments-section-wrap {
+  background: #9647c6;
+  margin-top: 25px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#homepage-celeb-moments-section-heading {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.001em;
+  color: #ffffff;
+}
+
+#homepage-celeb-moments-section-sub-heading {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.001em;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+#homepage-celeb-moments-section-content-grid-wrap {
+  display: grid;
+  grid-template-columns: 15% 13% 13% 20% 13% 13%;
+  grid-template-rows: auto;
+  gap: 6px;
+  width: 100%;
+  height: 300px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+#homepage-celeb-moments-section-content-grid-01 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  background-image: url("../bg-img/grid01.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+
+#homepage-celeb-moments-section-content-grid-02 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 9;
+  background-image: url("../bg-img/grid02.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+
+#homepage-celeb-moments-section-content-grid-03 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 9;
+  background-image: url("../bg-img/grid03.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+
+#homepage-celeb-moments-section-content-grid-04 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 9;
+  background-image: url("../bg-img/grid04.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+
+#homepage-celeb-moments-section-content-grid-05 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 9;
+  background-image: url("../bg-img/grid05.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+
+#homepage-celeb-moments-section-content-grid-06 {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 9;
+  background-image: url("../bg-img/grid04.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+
+#homepage-celeb-moments-section-content-grid-07 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 1;
+  grid-row-end: 9;
+  background-image: url("../bg-img/grid03.jpeg");
+  background-size:cover;
+  background-position:center;
+}

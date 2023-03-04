@@ -1,57 +1,56 @@
 import React, { Component } from "react";
-import "./Home.css"
+import "./Home.css";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick"
+import Slider from "react-slick";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 
 export const Home = () => {
+  var slider01_settings = {
+    className: "homepage-slider01-slider02-slider-component",
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    arrows: true,
+    variableWidth: true,
+  };
 
-var slider01_settings = {
-  className: "homepage-slider01-slider02-slider-component",
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 2,
-  arrows: true,
-  variableWidth: true,
-};
+  var slider02_settings = {
+    className: "homepage-slider01-slider02-slider-component",
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    arrows: true,
+    variableWidth: true,
+  };
 
-var slider02_settings = {
-  className: "homepage-slider01-slider02-slider-component",
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 2,
-  arrows: true,
-  variableWidth: true,
-};
+  var slider03_settings = {
+    className: "homepage-themes-section-slider-component",
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    arrows: true,
+    variableWidth: true,
+  };
 
-var slider03_settings = {
-  className:"homepage-themes-section-slider-component",
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 2,
-  arrows: true,
-  variableWidth: true,
-};
-
-var slider04_settings = {
-  className: "homepage-testimonial-section-slider-component",
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  variableWidth: true,
-};
+  var slider04_settings = {
+    className: "homepage-testimonial-section-slider-component",
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    variableWidth: true,
+  };
 
   return (
     <div id="homepage-main-wrapper">
@@ -1132,11 +1131,11 @@ var slider04_settings = {
 
       <div id="homepage-testimonial-section-slider-wrap">
         <Slider {...slider04_settings}>
-          <div id="homepage-testimonial-section-slide-client-01">
-            <div id="homepage-testimonial-section-slide-client-01-heading">
+          <div className="homepage-testimonial-section-slide-client-wrap">
+            <div className="homepage-testimonial-section-slide-client-heading">
               Our happy clients
             </div>
-            <div id="homepage-testimonial-section-slide-client-01-sub-heading">
+            <div className="homepage-testimonial-section-slide-client-sub-heading">
               They are talking about Us{" "}
             </div>
 
@@ -1164,11 +1163,72 @@ var slider04_settings = {
               </div>
             </div>
           </div>
-          <div id="homepage-testimonial-section-slide-client-01"></div>
+
+          <div className="homepage-testimonial-section-slide-client-wrap">
+            <div className="homepage-testimonial-section-slide-client-heading">
+              Our happy clients
+            </div>
+            <div className="homepage-testimonial-section-slide-client-sub-heading">
+              They are talking about Us{" "}
+            </div>
+
+            <div className="homepage-testimonial-section-slide-client-details-wrap">
+              <div className="homepage-testimonial-section-slide-client-details">
+                <div className="homepage-testimonial-section-slide-client-rating">
+                  <Stack spacing={1}>
+                    <Rating name="read-only" value={5} readOnly size="small" />
+                  </Stack>
+                </div>
+                <div className="homepage-testimonial-section-slide-client-title">
+                  “Lorem ipsum dolor sit”
+                </div>
+                <div className="homepage-testimonial-section-slide-client-description">
+                  Lorem ipsum dolor sit amet consectetur. Non eget nibh{" "}
+                </div>
+              </div>
+
+              <div className="homepage-testimonial-section-slide-client-img-wrap">
+                <img
+                  src="./Home-img/home-testimonial-client.png"
+                  alt=""
+                  className="homepage-testimonial-section-slide-client-img"
+                />
+              </div>
+            </div>
+          </div>
         </Slider>
       </div>
 
       {/* testimonial section ends here */}
+
+      {/* celebration moments starts here */}
+
+      <div id="homepage-celeb-moments-section-wrap">
+        <div id="homepage-celeb-moments-section-heading">
+          Our Celebration moments{" "}
+        </div>
+        <div id="homepage-celeb-moments-section-sub-heading">
+          Take a look at !
+        </div>
+
+        <div id="homepage-celeb-moments-section-content-grid-wrap">
+          <div id="homepage-celeb-moments-section-content-grid-01">
+          </div>
+          <div id="homepage-celeb-moments-section-content-grid-02">
+          </div>
+          <div id="homepage-celeb-moments-section-content-grid-03">
+          </div>
+          <div id="homepage-celeb-moments-section-content-grid-04">
+          </div>
+          <div id="homepage-celeb-moments-section-content-grid-05">
+          </div>
+          <div id="homepage-celeb-moments-section-content-grid-06">
+          </div>
+          <div id="homepage-celeb-moments-section-content-grid-07">
+          </div>
+        </div>
+      </div>
+      {/* celebration moments ends here */}
     </div>
   );
 };
