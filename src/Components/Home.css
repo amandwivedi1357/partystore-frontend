@@ -336,6 +336,7 @@
   width: 90%;
   margin: auto;
   margin-top: 35px;
+  margin-bottom: 30px;
   justify-content: space-between;
   /* border: 1px solid red; */
 }
@@ -381,7 +382,7 @@
   background: rgba(255, 212, 1, 0.31);
   padding-top: 36px;
   padding-bottom: 36px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .homepage-themes-section-title {
@@ -500,7 +501,7 @@
 #homepage-testimonial-section-slider-wrap {
   width: 99.8%;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 .homepage-testimonial-section-slide-client-wrap {
@@ -614,7 +615,7 @@
 
 #homepage-celeb-moments-section-wrap {
   background: #9647c6;
-  margin-top: 25px;
+  margin-top: 10px;
   padding-top: 30px;
   padding-bottom: 30px;
 }
