@@ -1,0 +1,51 @@
+#navbar-dropdown-birthday-section-wrap {
+  display: flex;
+  width: 50%;
+  height: 268px;
+  margin-left: 87px;
+  padding: 15px;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 9;
+}
+
+#navbar-dropdown-birthday-section-content-row01 {
+  width: 20%;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 23px;
+  letter-spacing: 0.001em;
+  text-align: left;
+}
+
+#navbar-dropdown-birthday-section-content-row01 > div {
+  margin-bottom: 20px;
+}
+
+#navbar-dropdown-birthday-section-content-row02 {
+  width: 20%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.001em;
+  text-align: left;
+  color: #455A64;
+}
+
+#navbar-dropdown-birthday-section-content-row02 > div {
+  margin-bottom: 20px;
+}
+
+#navbar-dropdown-birthday-section-content-row03 {
+  width: 20%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0.001em;
+  text-align: left;
+  color: #455A64;
+}
+
+#navbar-dropdown-birthday-section-content-row03 > div {
+  margin-bottom: 20px;
+}

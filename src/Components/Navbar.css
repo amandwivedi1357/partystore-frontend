@@ -1,3 +1,7 @@
+#navbar-main-wrapper{
+ 
+}
+
 #navbar-top-color-block {
   background: #0a0196;
   height: 29px;
@@ -137,4 +141,8 @@
   letter-spacing: 0.015em;
   text-align: left;
   color: #707070;
+}
+
+#navbar-dropdown-main-wrap{
+ 
 }

@@ -46,6 +46,15 @@
   outline: none;
 }
 
+#footer-email-section-input-wrap > input::placeholder {
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.0025em;
+  text-align: left;
+}
+
 #footer-email-section-input-wrap > button {
   padding: 7px;
   width: 19%;
@@ -114,51 +123,56 @@
 }
 
 #footer-bottom-section-wrap {
-  background: #10044e;
+  background: #0a0196;
   padding-top: 23px;
   padding-bottom: 10px;
 }
 
-#footer-bottom-section-content-wrap{
+#footer-bottom-section-content-wrap {
   display: flex;
   justify-content: space-between;
-   color: #ffffff;
-   width: 80%;
-   margin: auto;
+  color: #ffffff;
+  width: 80%;
+  margin: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.0015em;
 }
 
-#footer-bottom-section-social-media-icons-youtube{
+#footer-bottom-section-social-media-icons-youtube {
   margin-left: 5px;
 }
 
-#footer-bottom-section-social-media-icons-wrap{
+#footer-bottom-section-social-media-icons-wrap {
   display: flex;
   justify-content: space-between;
   margin-top: -10px;
 }
 
-.footer-bottom-section-social-media-icons{
+.footer-bottom-section-social-media-icons {
   width: 20%;
 }
 
-.footer-bottom-section-social-media-icons:nth-child(4){
+.footer-bottom-section-social-media-icons:nth-child(4) {
   margin-left: -8px;
-  margin-top: 5px;
+  margin-top: 6px;
   width: 24%;
 }
 
-.footer-bottom-section-social-media-icons>img{
+.footer-bottom-section-social-media-icons > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-#footer-bottom-section-social-media-icons-youtube{
+#footer-bottom-section-social-media-icons-youtube {
   /* border: 1px solid red; */
   object-fit: contain;
 }
 
-#footer-bottom-section-content-heart-icon{
+#footer-bottom-section-content-heart-icon {
   margin-left: 5px;
   margin-right: 8px;
   font-size: 20px;
