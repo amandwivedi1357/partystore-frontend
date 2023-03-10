@@ -24,8 +24,8 @@ text-align: left;
   height: 350px;
   margin: auto;
   justify-content: space-between;
-  /* border: 2px solid green; */
   margin-top: 20px;
+  border: 1px solid red;
 }
 
 .celebration-package-section-silver-package-wrap {
@@ -41,13 +41,12 @@ border-radius: 5px;
 .celebration-package-section-silver-package-img-wrap {
   width: 100%;
   height: 45%;
-  background-color: black;
 }
 
 .celebration-package-section-silver-package-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .celebration-package-section-title-rating-wrap {
