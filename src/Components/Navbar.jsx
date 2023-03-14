@@ -62,7 +62,7 @@ export const Navbar = () => {
         </div>
         <div id="navbar-second-section-logo-wrap">
           <img
-            src="./Navbar-img/logo.png"
+            src="/Navbar-img/logo.png"
             alt="logo"
             id="navbar-second-section-logo"
           />
@@ -70,21 +70,21 @@ export const Navbar = () => {
         <div id="navbar-second-section-user-details-wrap">
           <div id="navbar-second-section-user-logo-wrap">
             <img
-              src="./Navbar-img/User.png"
+              src="/Navbar-img/User.png"
               alt="user"
               id="navbar-second-section-user-logo"
             />
           </div>
           <div id="navbar-second-section-wishlist-logo-wrap">
             <img
-              src="./Navbar-img/wishlist.png"
+              src="/Navbar-img/wishlist.png"
               alt="wishlist"
               id="navbar-second-section-wishlist-logo"
             />
           </div>
           <div id="navbar-second-section-cart-logo-wrap">
             <img
-              src="./Navbar-img/cart.png"
+              src="/Navbar-img/cart.png"
               alt="cart"
               id="navbar-second-section-cart-logo"
             />

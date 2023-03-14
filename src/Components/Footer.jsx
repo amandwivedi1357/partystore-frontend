@@ -19,7 +19,7 @@ export const Footer=()=>{
           <div>
             <div id="footer-main-content-section-logo-wrap">
               <img
-                src="./Navbar-img/logo.png"
+                src="/Navbar-img/logo.png"
                 alt=""
                 id="footer-main-content-section-logo"
               />
@@ -73,17 +73,17 @@ export const Footer=()=>{
             </div>
             <div id="footer-bottom-section-social-media-icons-wrap">
               <div className="footer-bottom-section-social-media-icons">
-                <img src="./Footer-img/Facebook.png" alt="facebook" />
+                <img src="/Footer-img/Facebook.png" alt="facebook" />
               </div>
               <div className="footer-bottom-section-social-media-icons">
-                <img src="./Footer-img/Twitter.png" alt="twitter" />
+                <img src="/Footer-img/Twitter.png" alt="twitter" />
               </div>
               <div className="footer-bottom-section-social-media-icons">
-                <img src="./Footer-img/Instagram.png" alt="instagram" />
+                <img src="/Footer-img/Instagram.png" alt="instagram" />
               </div>
               <div className="footer-bottom-section-social-media-icons">
                 <img
-                  src="./Footer-img/youtube.png"
+                  src="/Footer-img/youtube.png"
                   alt="youtube"
                   id="footer-bottom-section-social-media-icons-youtube"
                 />
