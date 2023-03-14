@@ -1,0 +1,186 @@
+#singleproduct-main-wrapper {
+  margin-top: 60px;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+#singleproduct-image-content-wrap {
+  margin-left: 87px;
+  width: 40%;
+  border: 0.5px solid rgba(0, 0, 0, 0.18);
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 20px;
+  height: 395px;
+}
+
+#singleproduct-image-content-image01-wrap {
+  width: 100%;
+  height: 250px;
+  border: 2px solid #000000;
+}
+
+#singleproduct-image-content-image01 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#singleproduct-image-content-image02-image03-wrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#singleproduct-image-content-image02-wrap {
+  height: 100px;
+  width: 38%;
+  border: 2px solid #000000;
+}
+
+#singleproduct-image-content-image02 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#singleproduct-image-content-image03-wrap {
+  height: 100px;
+  width: 60%;
+}
+
+#singleproduct-image-content-image03 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid #000000;
+}
+
+#singleproduct-product-details-wrap {
+  padding-left: 20px;
+  padding-top: 20px;
+  box-sizing: border-box;
+  border: 0.5px solid rgba(0, 0, 0, 0.18);
+  border-radius: 10px;
+  width: 40%;
+  margin-left: 20px;
+}
+
+#singleproduct-product-details-product-title-wrap {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  text-align: left;
+}
+
+#singleproduct-product-details-product-title-wrap > :nth-child(1) {
+  margin-right: 5px;
+}
+
+#singleproduct-product-details-product-title-wrap > :nth-child(3) {
+  margin-left: 5px;
+}
+
+#singleproduct-product-details-product-description {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.005em;
+  color: #707070;
+  width: 60%;
+  margin-top: 10px;
+}
+
+#singleproduct-product-details-rating {
+  margin-top: 20px;
+}
+
+#singleproduct-product-details-price-and-rental-days-wrap {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+#singleproduct-product-details-rental-days-wrap {
+  display: flex;
+  width: 63%;
+  justify-content: space-between;
+}
+
+#singleproduct-product-details-price-wrap > :nth-child(1) {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-right: 5px;
+}
+
+#singleproduct-product-details-price-wrap {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.001em;
+}
+
+#singleproduct-product-details-rental-days-wrap > :nth-child(1) {
+  width: 13%;
+  height: 25px;
+}
+
+#singleproduct-product-details-rental-days-wrap > :nth-child(1) > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#singleproduct-product-details-buttons-wrap {
+  text-align: left;
+  width: 90%;
+  margin-top: 40px;
+}
+
+#singleproduct-product-details-cart-button {
+  border: 1px solid #0a0196;
+  color: #0a0196;
+  padding: 5px;
+  width: 40%;
+  font-family: poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.001em;
+  background: white;
+  cursor: pointer;
+}
+
+#singleproduct-product-details-cart-button:hover{
+  transform: scale(1.1);
+}
+
+#singleproduct-product-details-book-now-button {
+    border: 1px solid #0a0196;
+  color: white;
+  padding: 5px;
+  width: 40%;
+  font-family: poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.001em;
+  background: #0A0196;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+#singleproduct-product-details-book-now-button:hover{
+  transform: scale(1.1);
+}
+
+#singleproduct-product-details-hr-divider{
+border: 0.2px solid rgba(38, 50, 56, 0.26);
+width: 90%;
+margin: auto;
+margin-top: 50px;
+margin-right: 40px;
+}

@@ -21,63 +21,57 @@ export const Celebrations = () => {
 
 return (
   <div id="packages-celebration-main-wrapper">
-    {celebrationdata && celebrationdata.map((section) => {
-      return (
-        <div className="celebration-package-section-wrap" key={section._id}>
-          <div className="celebration-package-section-headline">
-            {section.heading}
-          </div>
-          <div className="celebration-package-section-packages-wrap">
-            {section.packages &&
-              section.packages.map((product) => {
-                return (
-                  <div
-                    className="celebration-package-section-silver-package-wrap"
-                    key={product._id}
-                  >
-                    <div className="celebration-package-section-silver-package-img-wrap">
-                      <img
-                        src={product.image}
-                        alt=""
-                        className="celebration-package-section-silver-package-img"
-                      />
-                    </div>
+    <div className="celebration-package-section-wrap">
+      <div className="celebration-package-section-headline">
+        {/* {product.category} */}
+      </div>
 
-                    <div className="celebration-package-section-title-rating-wrap">
-                      <div className="celebration-package-section-silver-package-title">
-                        {product.title}
-                      </div>
-                      <div className="celebration-package-section-silver-package-rating">
-                        <Stack spacing={1}>
-                          <Rating
-                            name="read-only"
-                            value={product.rating}
-                            readOnly
-                            size="small"
-                          />
-                        </Stack>
-                      </div>
-                    </div>
+      <div className="celebration-package-section-packages-wrap">
+        {celebrationdata &&
+          celebrationdata.map((product) => {
+            return (
+              <div className="celebration-package-section-silver-package-wrap">
+                <div className="celebration-package-section-silver-package-img-wrap">
+                  <img
+                    src={product.images[0]}
+                    alt=""
+                    className="celebration-package-section-silver-package-img"
+                  />
+                </div>
 
-                    <div className="celebration-package-section-silver-package-price-wrap">
-                      <div>₹</div>
-                      <div>{product.price}</div>
-                    </div>
-
-                    <div className="celebration-package-section-silver-package-description">
-                      {product.description}
-                    </div>
-
-                    <button className="celebration-package-section-silver-package-buy-button">
-                      Book Now
-                    </button>
+                <div className="celebration-package-section-title-rating-wrap">
+                  <div className="celebration-package-section-silver-package-title">
+                    {product.package}
                   </div>
-                );
-              })}
-          </div>
-        </div>
-      );
-    })}
+                  <div className="celebration-package-section-silver-package-rating">
+                    <Stack spacing={1}>
+                      <Rating
+                        name="read-only"
+                        value={product.rating}
+                        readOnly
+                        size="small"
+                      />
+                    </Stack>
+                  </div>
+                </div>
+
+                <div className="celebration-package-section-silver-package-price-wrap">
+                  <div>₹</div>
+                  <div>{product.price}</div>
+                </div>
+
+                <div className="celebration-package-section-silver-package-description">
+                  {product.description}
+                </div>
+
+                <button className="celebration-package-section-silver-package-buy-button">
+                  Book Now
+                </button>
+              </div>
+            );
+          })}
+      </div>
+    </div>
   </div>
 );
 
