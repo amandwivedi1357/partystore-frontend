@@ -95,7 +95,7 @@
   width: 60%;
 }
 
-#navbar-products-packages-wrap > div {
+.navbar-products-packages-elements {
   padding: 12px 17px 12px 17px;
   width: max-content;
   font-size: 15px;
@@ -105,7 +105,7 @@
   cursor: pointer;
 }
 
-#navbar-products-packages-wrap > div:hover{
+.navbar-products-packages-elements:hover{
   background: #0a0196;
   color: white;
 }
@@ -143,6 +143,10 @@
   color: #707070;
 }
 
-#navbar-dropdown-main-wrap{
- 
+.birthday{
+  display: none;
+}
+
+#navbar-products-packages-birthday:hover .birthday{
+  display: block;
 }

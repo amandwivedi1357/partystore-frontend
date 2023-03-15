@@ -5,51 +5,40 @@ import { BirthdayDrop } from "./Dropdowns/BirthdayDrop";
 import { CelebrationDrop } from "./Dropdowns/CelebrationDrop";
 import { FestivalDrop } from "./Dropdowns/FestivalDrop";
 
-
 export const Navbar = () => {
-  
+   
+  //  Navigation dropdowns state and events handling
+
   const [birthdaytoggle, setbirthdaytoggle] = useState(false);
-  const [birthdaycount, setbirthdayCount] = useState(1);
 
   const [celebrationtoggle, setcelebrationtoggle] = useState(false);
-  const [celebrationcount, setcelebrationCount] = useState(1);
 
   const [festivaltoggle, setfestivaltoggle] = useState(false);
-  const [festivalcount, setfestivalCount] = useState(1);
 
+  const handleBirthdayMouseEnter = () => {
+    setbirthdaytoggle(true);
 
-  const handlebirthdayClick = () => {
-    setbirthdayCount(birthdaycount + 1);
-    if (birthdaycount % 2 == 1) {
-      setbirthdaytoggle(true);
-      setcelebrationtoggle(false);
-      setfestivaltoggle(false);
-    } else {
-      setbirthdaytoggle(false);
-    }
   };
 
-  const handlecelebrationClick = () => {
-    setcelebrationCount(celebrationcount + 1);
-    if (celebrationcount % 2 == 1) {
-      setcelebrationtoggle(true);
-      setbirthdaytoggle(false);
-      setfestivaltoggle(false);
-    } else {
-      setcelebrationtoggle(false);
-    }
+  const handleCelebrationMouseEnter = () => {
+    setcelebrationtoggle(true);
   };
 
-   const handlefestivalClick = () => {
-     setfestivalCount(festivalcount + 1);
-     if (festivalcount % 2 == 1) {
-       setfestivaltoggle(true);
-       setbirthdaytoggle(false);
-       setcelebrationtoggle(false);
-     } else {
-       setfestivaltoggle(false);
-     }
-   };
+  const handleFestivalMouseEnter = () => {
+    setfestivaltoggle(true);
+  };
+
+  const handleBirthdayMouseLeave = () => {
+    setbirthdaytoggle(false);
+  };
+
+  const handleCelebrationMouseLeave = () => {
+    setcelebrationtoggle(false);
+  };
+
+  const handleFestivalMouseLeave = () => {
+    setfestivaltoggle(false);
+  };
 
   return (
     <div id="navbar-main-wrapper">
@@ -93,20 +82,41 @@ export const Navbar = () => {
       </div>
       <div id="navbar-products-packages-searchbar-wrap">
         <div id="navbar-products-packages-wrap">
-          <div onMouseOver={handlebirthdayClick}>Birthdays</div>
-          <div onMouseOver={handlecelebrationClick}>Celebrations</div>
-          <div onMouseOver={handlefestivalClick}>Festivals</div>
-          <div>Your zinggalas</div>
-          <div>Accessories</div>
+          <div
+            onMouseEnter={handleBirthdayMouseEnter}
+            onMouseLeave={handleBirthdayMouseLeave}
+          >
+            <div className="navbar-products-packages-elements">Birthdays</div>
+            {birthdaytoggle === true && <BirthdayDrop />}
+          </div>
+
+          <div
+            onMouseEnter={handleCelebrationMouseEnter}
+            onMouseLeave={handleCelebrationMouseLeave}
+          >
+            <div className="navbar-products-packages-elements">
+              Celebrations
+            </div>
+            {celebrationtoggle === true && <CelebrationDrop />}
+          </div>
+
+          <div
+            onMouseEnter={handleFestivalMouseEnter}
+            onMouseLeave={handleFestivalMouseLeave}
+          >
+            <div className="navbar-products-packages-elements">Festivals</div>
+            {festivaltoggle === true && <FestivalDrop />}
+          </div>
+          <div className="navbar-products-packages-elements">
+            Your zinggalas
+          </div>
+          <div className="navbar-products-packages-elements">Accessories</div>
         </div>
         <div id="navbar-searchbar-wrap">
           <input type="search" placeholder="Search baloons,cakes,Themes etc." />
           <CiSearch id="navbar-searchbar-icon" />
         </div>
       </div>
-      {birthdaytoggle === true && <BirthdayDrop />}
-      {celebrationtoggle === true && <CelebrationDrop />}
-      {festivaltoggle === true && <FestivalDrop />}
     </div>
   );
 };

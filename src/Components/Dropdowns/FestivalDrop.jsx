@@ -28,13 +28,13 @@ export const FestivalDrop = () => {
 
       <div id="navbar-dropdown-festivals-section-content-row04">
         <div>
-          <img src="./Navbar-img/gold.png" alt="gold-package" />
+          <img src="/Navbar-img/gold.png" alt="gold-package" />
         </div>
         <div>
-          <img src="./Navbar-img/silver.png" alt="silver-package" />
+          <img src="/Navbar-img/silver.png" alt="silver-package" />
         </div>
         <div>
-          <img src="./Navbar-img/platinum.png" alt="platinum-package" />
+          <img src="/Navbar-img/platinum.png" alt="platinum-package" />
         </div>
       </div>
     </div>
