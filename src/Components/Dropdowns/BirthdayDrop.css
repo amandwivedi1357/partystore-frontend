@@ -19,6 +19,7 @@
 
 #navbar-dropdown-birthday-section-content-row01 > div {
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 #navbar-dropdown-birthday-section-content-row02 {
@@ -33,6 +34,7 @@
 
 #navbar-dropdown-birthday-section-content-row02 > div {
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 #navbar-dropdown-birthday-section-content-row03 {
@@ -47,4 +49,5 @@
 
 #navbar-dropdown-birthday-section-content-row03 > div {
   margin-bottom: 20px;
+  cursor: pointer;
 }

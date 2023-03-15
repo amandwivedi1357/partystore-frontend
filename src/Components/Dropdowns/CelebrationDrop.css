@@ -20,16 +20,20 @@
 
 #navbar-dropdown-celebrations-section-content-row01 > div {
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 #navbar-dropdown-celebrations-section-content-row02 > div {
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 #navbar-dropdown-celebrations-section-content-row03 > div {
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 #navbar-dropdown-celebrations-section-content-row04{
     display: flex;
+    cursor: pointer;
 }
