@@ -9,7 +9,7 @@ export const Celebrations = () => {
   const [celebrationdata, setCelebrationData] = useState([]);
 
   useEffect(() => {
-    axios("http://localhost:443/celebration")
+    axios("http://localhost:5000/celebration")
       .then((res) => setCelebrationData(res.data))
       .catch((err) => console.log(err));
       
@@ -17,58 +17,47 @@ export const Celebrations = () => {
 
   return (
     <div id="packages-celebration-main-wrapper">
-      <div className="celebration-package-section-wrap">
-        <div className="celebration-package-section-headline">
-          {/* {product.category} */}
+        <div className="celebration-main-headline">
+             All Celebrations
         </div>
 
-        <div className="celebration-package-section-packages-wrap">
+        <div className="celebration-categories-wrap">
           {celebrationdata &&
             celebrationdata.map((product) => {
               return (
-                <div className="celebration-package-section-silver-package-wrap" key={product._id}>
-                  <div className="celebration-package-section-silver-package-img-wrap">
+                <div
+                  className="celebration-single-category-wrap"
+                  key={product._id}
+                >
+                  <div className="celebration-single-category-img-wrap">
                     <img
-                      src={product.images[0]}
+                      src={product.image}
                       alt=""
-                      className="celebration-package-section-silver-package-img"
+                      className="celebration-single-category-img"
                     />
                   </div>
 
-                  <div className="celebration-package-section-title-rating-wrap">
-                    <div className="celebration-package-section-silver-package-title">
-                      {product.package}
-                    </div>
-                    <div className="celebration-package-section-silver-package-rating">
-                      <Stack spacing={1}>
-                        <Rating
-                          name="read-only"
-                          value={product.rating}
-                          readOnly
-                          size="small"
-                        />
-                      </Stack>
-                    </div>
+                  <div className="celebration-single-category-title">
+                    {product.category}
+                  </div>
+                  <div className="celebration-single-category-rating">
+                    <Stack spacing={1}>
+                      <Rating
+                        name="read-only"
+                        value={product.rating}
+                        readOnly
+                        size="small"
+                      />
+                    </Stack>
                   </div>
 
-                  <div className="celebration-package-section-silver-package-price-wrap">
-                    <div>₹</div>
-                    <div>{product.price}</div>
-                  </div>
-
-                  <div className="celebration-package-section-silver-package-description">
+                  <div className="celebration-single-category-description">
                     {product.description}
                   </div>
-                  <a href={`/celebrations/${product._id}`}>
-                    <button className="celebration-package-section-silver-package-buy-button">
-                      Book Now
-                    </button>
-                  </a>
                 </div>
               );
             })}
         </div>
       </div>
-    </div>
   );
 };
