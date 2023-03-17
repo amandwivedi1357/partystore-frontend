@@ -11,7 +11,7 @@ export const SingleProduct=()=>{
     const [productdata, setProductData] = useState();
 
     useEffect(() => {
-      axios(`http://localhost:1235/celebration/${id}`)
+      axios(`http://localhost:443/celebration/${id}`)
         .then((res) => setProductData(res.data))
         .catch((err) => console.log(err));
     },[id]);

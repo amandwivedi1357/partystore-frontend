@@ -3,17 +3,16 @@ import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import Pagination from "@mui/material/Pagination";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const Celebrations = () => {
   const [celebrationdata, setCelebrationData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:1235/celebration")
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-        setCelebrationData(res);
-      });
+    axios("http://localhost:443/celebration")
+      .then((res) => setCelebrationData(res.data))
+      .catch((err) => console.log(err));
+      
   }, []);
 
   return (
@@ -27,7 +26,7 @@ export const Celebrations = () => {
           {celebrationdata &&
             celebrationdata.map((product) => {
               return (
-                <div className="celebration-package-section-silver-package-wrap">
+                <div className="celebration-package-section-silver-package-wrap" key={product._id}>
                   <div className="celebration-package-section-silver-package-img-wrap">
                     <img
                       src={product.images[0]}
