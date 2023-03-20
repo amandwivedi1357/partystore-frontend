@@ -1,0 +1,100 @@
+#celebration-packages-section-wrap {
+  display: grid;
+  width: 70%;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: auto;
+  column-gap: 35px;
+  row-gap: 40px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  /* border: 1px solid red; */
+}
+
+#celebration-packages-main-headline {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0.015em;
+  margin-top: 50px;
+}
+
+#celebration-packages-main-headline>span{
+  color: #707070;
+  font-weight: 500;
+}
+
+.celebration-single-package-card-wrap {
+  padding: 5px;
+  border: 0.5px solid rgba(112, 112, 112, 0.37);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+.celebration-single-package-card-image-wrap {
+  width: 100%;
+  height: 200px;
+  background:#36454F;
+}
+
+.celebration-single-package-card-image {
+  width: 60%;
+  height: 60%;
+  margin-top: 40px;
+  object-fit: contain;
+}
+
+.celebration-single-package-card-title-rating-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.celebration-single-package-card-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.001em;
+}
+
+.celebration-single-package-card-rating {
+  margin-top: 5px;
+}
+
+.celebration-single-package-card-price {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.001em;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.celebration-single-package-card-price > :nth-child(1) {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.celebration-single-package-card-description {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.001em;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.65);
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.celebration-single-package-card-buy-now-button {
+  background-color: #0a0196;
+  color: white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  width: 98%;
+  padding: 10px 0px 10px 0px;
+  border: none;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}

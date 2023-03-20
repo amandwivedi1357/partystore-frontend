@@ -4,17 +4,22 @@ import Stack from "@mui/material/Stack";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { MdOutlineDone } from 'react-icons/md';
+import { RxCross2 } from 'react-icons/rx';
+
 
 export const SingleProduct=()=>{
 
-   let { id } = useParams();
+   let { category ,id} = useParams();
     const [productdata, setProductData] = useState();
+   
+   console.log(productdata)
 
     useEffect(() => {
-      axios(`http://localhost:443/celebration/${id}`)
+      axios(`http://localhost:5000/celebration/${category}/${id}`)
         .then((res) => setProductData(res.data))
         .catch((err) => console.log(err));
-    },[id]);
+    },[category,id]);
 
     return (
       <>
@@ -91,6 +96,90 @@ export const SingleProduct=()=>{
               </div>
 
               <hr id="singleproduct-product-details-hr-divider" />
+
+              <div id="singleproduct-product-details-inclusions-exclusions-wrap">
+                <div>
+                  {productdata.inclusions && (
+                    <div id="singleproduct-product-details-inclusions-headline">
+                      Inclusions
+                    </div>
+                  )}
+                  {productdata.inclusions &&
+                    productdata.inclusions.map((inclusions) => {
+                      return (
+                        <div className="singleproduct-product-details-inclusions-wrap">
+                          <div>
+                            <MdOutlineDone />
+                          </div>
+                          <div>{inclusions}</div>
+                        </div>
+                      );
+                    })}
+                </div>
+
+                <div>
+                  {productdata.exclusions && (
+                    <div id="singleproduct-product-details-exclusions-headline">
+                      Exclusions
+                    </div>
+                  )}
+                  {productdata.exclusions &&
+                    productdata.exclusions.map((exclusions) => {
+                      return (
+                        <div className="singleproduct-product-details-exclusions-wrap">
+                          <div>
+                            <RxCross2 />
+                          </div>
+                          <div>{exclusions}</div>
+                        </div>
+                      );
+                    })}
+                </div>
+              </div>
+
+              <div id="singleproduct-product-details-ad-ons-main-wrap">
+                <div id="singleproduct-product-details-ad-ons-headline">
+                  Package Add-ons
+                </div>
+                <div className="singleproduct-product-details-ad-ons-content-wrap">
+                  <div className="singleproduct-product-details-ad-ons-content-details-image-wrap">
+                    <div className="singleproduct-product-details-ad-ons-content-details-wrap">
+                      <div>Candles</div>
+                      <div>Description</div>
+                      <div>
+                        <Stack spacing={1}>
+                          <Rating
+                            name="read-only"
+                            value={5}
+                            readOnly
+                            size="small"
+                          />
+                        </Stack>
+                      </div>
+                      <div className="singleproduct-product-details-ad-ons-content-details-price">
+                        <span>₹</span>
+                        <span>50</span>
+                        <span>Additional</span>
+                      </div>
+                    </div>
+
+                    <div className="singleproduct-product-details-ad-ons-content-image-wrap">
+                      <img
+                        src="https://s3-alpha-sig.figma.com/img/e581/ea7e/125d02262170708fd8c7b8bbd64d113f?Expires=1680480000&Signature=NosH9-Ln8CVw9fLk4TMoFVZ6iipQZ-6hxeXXXC9jngQdbJFrJIcVeBArjpGWLiml9kqVs5dKCCmBDGqds9rZ~hMIGZ8kEsGi9jiakCgaJCBoer3kbtR2IdJxbUzOTOgztruZRgT-e6ah6LDjgw9Y~aC16eXuiLUr~Mqpik65ygrT77SWG99m9lG~sEdBJLh5crJrH6grYOOQU9Y91~Pmb8MQh1YNCXMF36ahLRL3xIG4aVX9OUhUWR-wWGIVuM80XvP83GTgzjbORTXthodFn7o4q9YhZiFJrzAUWKN3GJDmFrwD6l0bo0lPNuQ93yjNPpUnV~nyfP4QfdTnPGGTsg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+
+                  <div className="singleproduct-product-details-ad-ons-content-buttons-wrap">
+                    <button>+</button>
+                    <button>0</button>
+                    <button>-</button>
+                  </div>
+                </div>
+              </div>
+
+              {/*  */}
             </div>
           </div>
         )}

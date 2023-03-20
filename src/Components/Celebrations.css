@@ -1,4 +1,4 @@
-#packages-celebration-main-wrapper {
+#celebration-categories-main-wrapper {
   width: 88%;
   margin: auto;
   margin-top: 50px;
@@ -25,9 +25,12 @@
   margin-top: 40px;
 }
 
+.celebration-categories-wrap>a{
+  text-decoration: none;
+}
+
 .celebration-single-category-wrap {
   padding: 5px;
-  background: #ffffff;
   border: 0.5px solid rgba(112, 112, 112, 0.37);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
