@@ -12,8 +12,6 @@ export const SingleProduct=()=>{
 
    let { category ,id} = useParams();
     const [productdata, setProductData] = useState();
-   
-   console.log(productdata)
 
     useEffect(() => {
       axios(`http://localhost:5000/celebration/${category}/${id}`)
@@ -141,42 +139,48 @@ export const SingleProduct=()=>{
                 <div id="singleproduct-product-details-ad-ons-headline">
                   Package Add-ons
                 </div>
-                <div className="singleproduct-product-details-ad-ons-content-wrap">
-                  <div className="singleproduct-product-details-ad-ons-content-details-image-wrap">
-                    <div className="singleproduct-product-details-ad-ons-content-details-wrap">
-                      <div>Candles</div>
-                      <div>Description</div>
-                      <div>
-                        <Stack spacing={1}>
-                          <Rating
-                            name="read-only"
-                            value={5}
-                            readOnly
-                            size="small"
-                          />
-                        </Stack>
-                      </div>
-                      <div className="singleproduct-product-details-ad-ons-content-details-price">
-                        <span>₹</span>
-                        <span>50</span>
-                        <span>Additional</span>
-                      </div>
-                    </div>
+                {productdata.ad_ons &&
+                    productdata.ad_ons.map((adons) => {
+                      return (
+                        <div className="singleproduct-product-details-ad-ons-content-wrap">
+                          <div className="singleproduct-product-details-ad-ons-content-details-image-wrap">
+                            <div className="singleproduct-product-details-ad-ons-content-details-wrap">
+                              <div>{adons.title}</div>
+                              <div>{adons.description}</div>
+                              <div>
+                                <Stack spacing={1}>
+                                  <Rating
+                                    name="read-only"
+                                    value={adons.rating}
+                                    readOnly
+                                    size="small"
+                                  />
+                                </Stack>
+                              </div>
+                              <div className="singleproduct-product-details-ad-ons-content-details-price">
+                                <span>₹</span>
+                                <span>{adons.price}</span>
+                                {adons.additional_info && (
+                                  <span>{adons.additional_info}</span>
+                                )}
+                              </div>
+                            </div>
 
-                    <div className="singleproduct-product-details-ad-ons-content-image-wrap">
-                      <img
-                        src="https://s3-alpha-sig.figma.com/img/e581/ea7e/125d02262170708fd8c7b8bbd64d113f?Expires=1680480000&Signature=NosH9-Ln8CVw9fLk4TMoFVZ6iipQZ-6hxeXXXC9jngQdbJFrJIcVeBArjpGWLiml9kqVs5dKCCmBDGqds9rZ~hMIGZ8kEsGi9jiakCgaJCBoer3kbtR2IdJxbUzOTOgztruZRgT-e6ah6LDjgw9Y~aC16eXuiLUr~Mqpik65ygrT77SWG99m9lG~sEdBJLh5crJrH6grYOOQU9Y91~Pmb8MQh1YNCXMF36ahLRL3xIG4aVX9OUhUWR-wWGIVuM80XvP83GTgzjbORTXthodFn7o4q9YhZiFJrzAUWKN3GJDmFrwD6l0bo0lPNuQ93yjNPpUnV~nyfP4QfdTnPGGTsg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
-                        alt=""
-                      />
-                    </div>
-                  </div>
+                            <div className="singleproduct-product-details-ad-ons-content-image-wrap">
+                              <img
+                                src="https://s3-alpha-sig.figma.com/img/e581/ea7e/125d02262170708fd8c7b8bbd64d113f?Expires=1680480000&Signature=NosH9-Ln8CVw9fLk4TMoFVZ6iipQZ-6hxeXXXC9jngQdbJFrJIcVeBArjpGWLiml9kqVs5dKCCmBDGqds9rZ~hMIGZ8kEsGi9jiakCgaJCBoer3kbtR2IdJxbUzOTOgztruZRgT-e6ah6LDjgw9Y~aC16eXuiLUr~Mqpik65ygrT77SWG99m9lG~sEdBJLh5crJrH6grYOOQU9Y91~Pmb8MQh1YNCXMF36ahLRL3xIG4aVX9OUhUWR-wWGIVuM80XvP83GTgzjbORTXthodFn7o4q9YhZiFJrzAUWKN3GJDmFrwD6l0bo0lPNuQ93yjNPpUnV~nyfP4QfdTnPGGTsg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+                                alt=""
+                              />
+                            </div>
+                          </div>
 
-                  <div className="singleproduct-product-details-ad-ons-content-buttons-wrap">
-                    <button>+</button>
-                    <button>0</button>
-                    <button>-</button>
-                  </div>
-                </div>
+                          <div className="singleproduct-product-details-ad-ons-content-buttons-wrap">
+                            <button>+</button>
+                            <button>0</button>
+                            <button>-</button>
+                          </div>
+                        </div>
+                      );})}
               </div>
 
               {/*  */}

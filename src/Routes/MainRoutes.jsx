@@ -3,6 +3,7 @@ import { Home } from "../Components/Home";
 import { Celebrations } from "../Components/Celebrations";
 import { SingleProduct } from "../Components/SingleProduct.jsx";
 import { CelebrationPackages } from "../Components/CelebrationPackages";
+import { Cart } from "../Components/Cart.jsx";
 
 export const MainRoutes = () => {
   return (
@@ -15,6 +16,7 @@ export const MainRoutes = () => {
           element={<CelebrationPackages />}
         />
         <Route path="/celebrations/:category/:id" element={<SingleProduct />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </>
   );

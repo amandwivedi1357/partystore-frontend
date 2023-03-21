@@ -1,0 +1,155 @@
+#cart-popup-main-wrapper {
+ box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 27%;
+  margin: auto;
+  padding-bottom: 500px;
+  margin-top: 20px;
+}
+
+#cart-popup-header-wrap {
+  display: flex;
+  border-bottom: 0.5px solid #263238;
+  padding: 10px;
+  width: 98%;
+  margin: auto;
+}
+
+#cart-popup-header-wrap > :nth-child(1) {
+  margin-top: 5px;
+  font-size: 19px;
+  margin-right: 20px;
+}
+
+#cart-popup-header-wrap > :nth-child(2) {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.015em;
+}
+
+#cart-popup-header-wrap > :nth-child(3) {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0.015em;
+  color: #263238;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+#cart-popup-header-wrap > :nth-child(4) {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 0.015em;
+  color: #0a0196;
+  margin-top: 5px;
+  margin-left: 110px;
+}
+
+.cart-product-image-title-description-wrap {
+  display: flex;
+}
+
+.cart-product-image-wrap {
+  width: 17%;
+  height: 40px;
+  margin-top: 3px;
+}
+
+.cart-product-image-wrap > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.cart-product-wrap {
+  width: 90%;
+  margin: auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-top: 20px;
+  padding: 12px;
+}
+
+.cart-product-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.005em;
+  text-align: left;
+}
+
+.cart-product-description {
+font-size: 14px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.005em;
+text-align: left;
+color: #0000009E;
+}
+
+.cart-product-title-description-wrap{
+    margin-left: 10px;
+}
+
+.cart-product-divider{
+    margin-top: 15px;
+}
+
+.cart-product-quantity-price-wrap{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.cart-product-quantity-buttons-wrap{
+    display: flex;
+}
+
+.cart-product-quantity-buttons-wrap{
+  width: 40%;
+}
+
+.cart-product-quantity-buttons-wrap>button{
+  height: 25px;
+  width: 18%;
+  margin-right: 5px;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+ border: none;
+  font-family: Poppins;
+font-size: 18px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0.005em;
+text-align: center;
+background: #FFFFFF;
+border-radius: 3px;
+cursor: pointer;
+}
+
+.cart-product-quantity-buttons-wrap>:nth-child(2){
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.cart-product-price-wrap{
+font-size: 14px;
+font-weight: 600;
+line-height: 24px;
+letter-spacing: 0.001em;
+text-align: center;
+}
+
+.cart-product-price-wrap>:nth-child(1){
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-right: 3px;
+}
+
+.cart-product-delete-icon{
+    color: #707070;
+    margin-left: 30px;
+    margin-top: -5px;
+    font-size: 20px;
+}
