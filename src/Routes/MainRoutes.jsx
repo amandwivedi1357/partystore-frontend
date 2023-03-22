@@ -4,6 +4,7 @@ import { Celebrations } from "../Components/Celebrations";
 import { SingleProduct } from "../Components/SingleProduct.jsx";
 import { CelebrationPackages } from "../Components/CelebrationPackages";
 import { Cart } from "../Components/Cart.jsx";
+import { Wishlist } from "../Components/Wishlist.jsx";
 
 export const MainRoutes = () => {
   return (
@@ -17,6 +18,7 @@ export const MainRoutes = () => {
         />
         <Route path="/celebrations/:category/:id" element={<SingleProduct />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
       </Routes>
     </>
   );

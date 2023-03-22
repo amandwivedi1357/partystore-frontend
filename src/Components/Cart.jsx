@@ -1,7 +1,7 @@
 import "./Cart.css"
 import { BiArrowBack } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
-
+import { BsArrowRight } from "react-icons/bs";
 
 export const Cart=()=>{
     return (
@@ -49,13 +49,31 @@ export const Cart=()=>{
 
         <div className="cart-total-pay-wrap">
           <div>Price Details</div>
-          <div>
-            <div>Cart(MRP 3 items)</div>
-            <div>₹ 2999</div>
+          <div className="cart-total-pay-wrap-products-quantity-price-wrap">
+            <div>Cart (MRP 3 items)</div>
+            <div>
+              <span>₹</span>2999
+            </div>
           </div>
-          <div>
+          <div className="cart-total-pay-wrap-products-final-price">
             <div>You Pay</div>
-            <div>₹ 4999</div>
+            <div>
+              <span>₹</span>4999
+            </div>
+          </div>
+        </div>
+        <div className="cart-grand-total-proceed-button-wrap">
+          <div className="cart-grand-total-wrap">
+            <div className="cart-grand-total-content">
+              <span>₹</span>4999
+            </div>
+            <div className="cart-grand-total-content-title">Grand Total</div>
+          </div>
+          <div className="cart-proceed-button-wrap">
+              <span>Proceed</span>{" "}
+              <span className="cart-proceed-button-arrow-icon">
+                <BsArrowRight />
+              </span>
           </div>
         </div>
       </div>
