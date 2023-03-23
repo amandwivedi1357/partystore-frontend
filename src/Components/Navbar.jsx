@@ -4,9 +4,10 @@ import { useState } from "react";
 import { BirthdayDrop } from "./Dropdowns/BirthdayDrop";
 import { CelebrationDrop } from "./Dropdowns/CelebrationDrop";
 import { FestivalDrop } from "./Dropdowns/FestivalDrop";
+import { useLocation } from "react-router-dom";
 
 export const Navbar = () => {
-   
+
   //  Navigation dropdowns state and events handling
 
   const [birthdaytoggle, setbirthdaytoggle] = useState(false);
@@ -17,7 +18,6 @@ export const Navbar = () => {
 
   const handleBirthdayMouseEnter = () => {
     setbirthdaytoggle(true);
-
   };
 
   const handleCelebrationMouseEnter = () => {
@@ -39,6 +39,11 @@ export const Navbar = () => {
   const handleFestivalMouseLeave = () => {
     setfestivaltoggle(false);
   };
+
+    const { pathname } = useLocation();
+    if (pathname === "/checkout") return null;
+
+    
 
   return (
     <div id="navbar-main-wrapper">
