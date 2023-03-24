@@ -6,6 +6,9 @@ import { CelebrationPackages } from "../Components/CelebrationPackages";
 import { Cart } from "../Components/Cart.jsx";
 import { Wishlist } from "../Components/Wishlist.jsx";
 import { Checkout } from "../Components/Checkout.jsx";
+import { Login } from "../Components/Login.jsx";
+import { Signup } from "../Components/Signup.jsx";
+import { Register } from "../Components/Register.jsx";
 
 export const MainRoutes = () => {
   return (
@@ -21,6 +24,9 @@ export const MainRoutes = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </>
   );

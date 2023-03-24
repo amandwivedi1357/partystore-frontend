@@ -3,8 +3,20 @@ import { MdOutlineAddLocationAlt } from "react-icons/md";
 import { FaShoppingCart } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import { HiCurrencyRupee } from "react-icons/hi";
+import { useState } from "react";
+import { Address } from "./Address.jsx";
 
 export const Checkout = () => {
+const [addresstoggle,setAddresstoggle]=useState(false);
+
+const openAddressPopup= () => {
+  setAddresstoggle(true);
+};
+
+const closeAddressPopup=()=>{
+  setAddresstoggle(false);
+}
+
   return (
     <div id="checkout-page-main-wrapper">
       <div id="checkout-main-header-wrap">
@@ -33,6 +45,12 @@ export const Checkout = () => {
         </div>
       </div>
 
+      {addresstoggle === true && (
+        <div id="checkout-address-popup-component">
+          <Address addressclosetoggle={closeAddressPopup} />
+        </div>
+      )}
+
       <div id="checkout-page-main-content-wrap">
         <div id="checkout-page-user-address-main-wrap">
           <div id="checkout-page-user-address-headline">Choose Address</div>
@@ -40,7 +58,10 @@ export const Checkout = () => {
             Detailed address will help our delivery partner reach your doorstep
             quickly
           </div>
-          <div id="checkout-page-user-add-new-address-wrap">
+          <div
+            id="checkout-page-user-add-new-address-wrap"
+            onClick={openAddressPopup}
+          >
             <span>
               <MdOutlineAddLocationAlt />
             </span>
@@ -70,7 +91,7 @@ export const Checkout = () => {
                     <div>Party Store</div>
                   </div>
                 </div>
-                <hr />
+                <hr className="checkout-page-user-cart-content-single-product-hr" />
 
                 <div className="checkout-page-user-cart-content-single-product-quantity-price-wrap">
                   <div className="checkout-page-user-cart-content-single-product-quantity-wrap">
