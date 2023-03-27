@@ -5,8 +5,55 @@ import { BirthdayDrop } from "./Dropdowns/BirthdayDrop";
 import { CelebrationDrop } from "./Dropdowns/CelebrationDrop";
 import { FestivalDrop } from "./Dropdowns/FestivalDrop";
 import { useLocation } from "react-router-dom";
+import { Login } from "./Login.jsx";
+import { Cart } from "./Cart.jsx";
+import { Signup } from "./Signup.jsx";
+import { Register } from "./Register.jsx";
 
 export const Navbar = () => {
+  //Autentication popup state handling
+
+  const [loginToggle, setloginToggle] = useState(false);
+  const [signupToggle, setsignupToggle] = useState(false);
+  const [registerToggle, setregisterToggle] = useState(false);
+
+  const handleLogin = () => {
+    setsignupToggle(false);
+    setregisterToggle(false);
+    setloginToggle(true);
+  };
+  const Loginpopupclose = () => {
+    setloginToggle(false);
+  };
+
+  const handleSignup = () => {
+    setloginToggle(false);
+    setregisterToggle(false);
+    setsignupToggle(true);
+  };
+  const signpopupclose = () => {
+    setsignupToggle(false);
+  };
+
+  const handleRegister = () => {
+    setsignupToggle(false);
+    setloginToggle(false);
+    setregisterToggle(true);
+  };
+  const registerpopupclose = () => {
+    setregisterToggle(false);
+  };
+
+  //Cart popup state handling
+
+  const [cartToggle, setcartToggle] = useState(false);
+
+  const handleCartToggle = () => {
+    setcartToggle(true);
+  };
+  const cartToggleClose = () => {
+    setcartToggle(false);
+  };
 
   //  Navigation dropdowns state and events handling
 
@@ -40,10 +87,8 @@ export const Navbar = () => {
     setfestivaltoggle(false);
   };
 
-    const { pathname } = useLocation();
-    if (pathname === "/checkout") return null;
-
-    
+  const { pathname } = useLocation();
+  if (pathname === "/checkout") return null;
 
   return (
     <div id="navbar-main-wrapper">
@@ -62,13 +107,17 @@ export const Navbar = () => {
           />
         </div>
         <div id="navbar-second-section-user-details-wrap">
-          <div id="navbar-second-section-user-logo-wrap">
+          {/*<div id="navbar-second-section-user-logo-wrap">
             <img
               src="/Navbar-img/User.png"
               alt="user"
               id="navbar-second-section-user-logo"
             />
+          </div> */}
+          <div id="navbar-user-login-button-wrap">
+            <button onClick={handleLogin}>Login</button>
           </div>
+
           <div id="navbar-second-section-wishlist-logo-wrap">
             <img
               src="/Navbar-img/wishlist.png"
@@ -76,7 +125,10 @@ export const Navbar = () => {
               id="navbar-second-section-wishlist-logo"
             />
           </div>
-          <div id="navbar-second-section-cart-logo-wrap">
+          <div
+            id="navbar-second-section-cart-logo-wrap"
+            onClick={handleCartToggle}
+          >
             <img
               src="/Navbar-img/cart.png"
               alt="cart"
@@ -122,6 +174,22 @@ export const Navbar = () => {
           <CiSearch id="navbar-searchbar-icon" />
         </div>
       </div>
+      {loginToggle && (
+        <Login Loginpopupclose={Loginpopupclose} handleSignup={handleSignup} />
+      )}
+      {cartToggle && <Cart cartToggleClose={cartToggleClose} />}
+      {signupToggle && (
+        <Signup
+          signpopupclose={signpopupclose}
+          handleLogin={handleLogin}
+          handleRegister={handleRegister}
+        />
+      )}
+      {registerToggle && (
+        <Register
+          registerpopupclose={registerpopupclose}
+        />
+      )}
     </div>
   );
 };

@@ -1,9 +1,19 @@
+#login-popup-main-wrap{
+    height: 100%;
+    width: 100%;
+  backdrop-filter: blur(3px);
+    position: fixed;
+    z-index: 999999;
+    top: 0px;   
+}
+
 #user-login-main-wrapper{
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    width: 45%;
-    margin: auto;
-    margin-top: 20px;
+    width: 50%;
+    position: fixed;
+    left: 25%;
+    margin-top: 213px;
 }
 
 #user-login-column-one-wrap{
@@ -46,12 +56,14 @@ margin-top: 15px;
     top: 10px;
     right: 10px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 #user-login-column-two-wrap{
     padding:95px 30px 0px 30px;
     width: 60%;
     position: relative;
+    background: white;
 }
 
 #user-login-column-two-input{

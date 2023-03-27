@@ -1,8 +1,9 @@
 import "./Login.css";
 import { RxCross1 } from "react-icons/rx";
 
-export const Login =()=>{
-    return (
+export const Login = ({ Loginpopupclose, handleSignup }) => {
+  return (
+    <div id="login-popup-main-wrap">
       <div id="user-login-main-wrapper">
         <div id="user-login-column-one-wrap">
           <div id="user-login-column-one-headline">Log In</div>
@@ -15,7 +16,10 @@ export const Login =()=>{
         </div>
 
         <div id="user-login-column-two-wrap">
-        <RxCross1 id="user-login-popup-close-button"/>
+          <RxCross1
+            id="user-login-popup-close-button"
+            onClick={Loginpopupclose}
+          />
           <input
             type="text"
             placeholder="Enter Phone Number Or Email ID"
@@ -25,11 +29,15 @@ export const Login =()=>{
           <button id="user-login-column-two-otp-button">Request OTP</button>
           <div id="user-login-column-two-new-user-redirect-wrap">
             <span>New To zinggalas ?</span>
-            <span id="user-login-column-two-new-user-redirect-div">
+            <span
+              id="user-login-column-two-new-user-redirect-div"
+              onClick={handleSignup}
+            >
               Create an account
             </span>
           </div>
         </div>
       </div>
-    );
-}
+    </div>
+  );
+};

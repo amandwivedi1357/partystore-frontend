@@ -1,6 +1,3 @@
-#navbar-main-wrapper{
- 
-}
 
 #navbar-top-color-block {
   background: #0a0196;
@@ -12,6 +9,7 @@
   justify-content: space-around;
   padding-top: 10px;
   padding-bottom: 20px;
+  padding-left: 12px;
   width: 99.8%;
   border-bottom: 1px solid lightgrey;
 }
@@ -48,19 +46,21 @@
 #navbar-second-section-user-details-wrap {
   display: flex;
   justify-content: space-around;
-  width: 15%;
+  width: 20%;
+  align-items: center;
 }
 
-#navbar-second-section-user-logo-wrap {
+/* #navbar-second-section-user-logo-wrap {
   width: 13%;
-}
+} */
 
 #navbar-second-section-wishlist-logo-wrap {
-  width: 13%;
+  width: 10%;
 }
 
 #navbar-second-section-cart-logo-wrap {
-  width: 13%;
+  width: 10%;
+  cursor: pointer;
 }
 
 #navbar-second-section-user-logo {
@@ -149,4 +149,18 @@
 
 #navbar-products-packages-birthday:hover .birthday{
   display: block;
+}
+
+#navbar-user-login-button-wrap>button{
+  padding: 8px;
+  width: 100%;
+  background-color: #0A0196;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#navbar-user-login-button-wrap{
+width: 40%;
 }
