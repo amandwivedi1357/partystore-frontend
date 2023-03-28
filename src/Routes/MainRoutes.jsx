@@ -6,8 +6,6 @@ import { CelebrationPackages } from "../Components/CelebrationPackages";
 import { Cart } from "../Components/Cart.jsx";
 import { Wishlist } from "../Components/Wishlist.jsx";
 import { Checkout } from "../Components/Checkout.jsx";
-import { Login } from "../Components/Login.jsx";
-import { Signup } from "../Components/Signup.jsx";
 import { Register } from "../Components/Register.jsx";
 
 export const MainRoutes = () => {
