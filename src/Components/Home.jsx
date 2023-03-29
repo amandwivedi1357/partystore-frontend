@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
+import { getAuth } from "firebase/auth";
 
 export const Home = () => {
   var slider01_settings = {
