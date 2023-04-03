@@ -1,45 +1,58 @@
 import "./Navbar.css";
 import { CiSearch } from "react-icons/ci";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BirthdayDrop } from "./Dropdowns/BirthdayDrop";
 import { CelebrationDrop } from "./Dropdowns/CelebrationDrop";
 import { FestivalDrop } from "./Dropdowns/FestivalDrop";
 import { useLocation } from "react-router-dom";
 import { Login } from "./Login.jsx";
 import { Cart } from "./Cart.jsx";
-import { Signup } from "./Signup.jsx";
 import { Register } from "./Register.jsx";
+import { getAuth, signOut } from "firebase/auth";
 
 export const Navbar = () => {
   //Autentication popup state handling
 
   const [loginToggle, setloginToggle] = useState(false);
-  const [signupToggle, setsignupToggle] = useState(false);
   const [registerToggle, setregisterToggle] = useState(false);
+  const [isLoggedin ,setisLoggedin] = useState(false);
+  const [userRegister ,setUserRegister] = useState({});
 
-  const handleLogin = () => {
-    setsignupToggle(false);
+useEffect(() => {
+  const auth = getAuth();
+  const user = auth.currentUser;
+  user!==null ? setisLoggedin(true) : setisLoggedin(false);
+}, [loginToggle]);
+
+  const handleLoginPopup = () => {
     setregisterToggle(false);
     setloginToggle(true);
   };
+
+
+  const handleLogout =()=>{
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        setisLoggedin(false);
+        // Sign-out successful. 
+        console.log("user signout successful")
+      })
+      .catch((error) => {
+        // An error happened
+        console.log(error);
+      });
+  }
+
   const Loginpopupclose = () => {
     setloginToggle(false);
   };
 
-  const handleSignup = () => {
-    setloginToggle(false);
-    setregisterToggle(false);
-    setsignupToggle(true);
-  };
-  const signpopupclose = () => {
-    setsignupToggle(false);
-  };
-
   const handleRegister = () => {
-    setsignupToggle(false);
     setloginToggle(false);
     setregisterToggle(true);
   };
+
   const registerpopupclose = () => {
     setregisterToggle(false);
   };
@@ -114,9 +127,26 @@ export const Navbar = () => {
               id="navbar-second-section-user-logo"
             />
           </div> */}
-          <div id="navbar-user-login-button-wrap">
-            <button onClick={handleLogin}>Login</button>
-          </div>
+          {isLoggedin === false && (
+            <div id="navbar-user-login-button-wrap">
+              <button onClick={handleLoginPopup}>Login</button>
+            </div>
+          )}
+
+          {isLoggedin === true && (
+            // <div id="navbar-second-section-user-avatar-wrap">
+            //   <div>
+            //     <img
+            //       src="/Navbar-img/user.png"
+            //       alt="user"
+            //       id="navbar-second-section-user-logo"
+            //     />
+            //   </div>
+            <div id="navbar-user-login-button-wrap">
+              <button onClick={handleLogout}>Logout</button>
+            </div>
+            // </div>
+          )}
 
           <div id="navbar-second-section-wishlist-logo-wrap">
             <img
@@ -175,21 +205,13 @@ export const Navbar = () => {
         </div>
       </div>
       {loginToggle && (
-        <Login Loginpopupclose={Loginpopupclose} handleSignup={handleSignup} />
-      )}
-      {cartToggle && <Cart cartToggleClose={cartToggleClose} />}
-      {signupToggle && (
-        <Signup
-          signpopupclose={signpopupclose}
-          handleLogin={handleLogin}
+        <Login
+          Loginpopupclose={Loginpopupclose}
           handleRegister={handleRegister}
         />
       )}
-      {registerToggle && (
-        <Register
-          registerpopupclose={registerpopupclose}
-        />
-      )}
+      {cartToggle && <Cart cartToggleClose={cartToggleClose} />}
+      {registerToggle && <Register registerpopupclose={registerpopupclose} />}
     </div>
   );
 };

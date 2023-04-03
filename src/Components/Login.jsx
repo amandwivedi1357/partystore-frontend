@@ -8,55 +8,55 @@ import {
 } from "firebase/auth";
 import { firebase } from "../firebase-config.js";
 
-export const Login = ({ Loginpopupclose, handleSignup }) => {
+export const Login = ({ Loginpopupclose, handleSignup, handleRegister}) => {
   const [phone, setPhone] = useState("");
   const [otp, setOtp] = useState("");
   const [requestotp, setRequestotp] = useState(false);
+  const [user, setUser] = useState("");
 
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
 
-   const auth = getAuth();
-   const user = auth.currentUser;
+  const handleOtpChange = (e) => {
+    setOtp(e.target.value);
+  };
 
-   if (user) {
-     // User is signed in, see docs for a list of available properties
-     // https://firebase.google.com/docs/reference/js/firebase.User
-     // ...
-     console.log(JSON.stringify(user));
-   } else {
-     // No user is signed in.
-     console.log("user not signed in");
-   }
+  const userExistsCheck = () => {
+    let userData = getAuth().currentUser;
+    if (userData !== null) {
+      if (userData.metadata.creationTime === userData.metadata.lastSignInTime) {
+        handleRegister();
+        console.log("user for the first time", userData);
+      } else {
+        console.log("user already present", userData.uid);
+      }
+    } else {
+      console.log("please login in");
+    }
+  };
 
-   
+  const recaptchaConfig = () => {
+    const auth = getAuth();
+    window.recaptchaVerifier = new RecaptchaVerifier(
+      "sign-in-button",
+      {
+        size: "invisible",
+        callback: (response) => {
+          // reCAPTCHA solved, allow signInWithPhoneNumber.
+          onSignInSubmit();
+          console.log("recaptcha verified");
+        },
+        defaultCountry: "IN",
+      },
+      auth
+    );
+  };
 
-  const handlePhoneChange=(e)=>{
-     setPhone(e.target.value);
-  }
+  const onSignInSubmit = () => {
+    recaptchaConfig();
+    const phoneNumber = "+91" + phone;
 
-const handleOtpChange = (e) => {
-  setOtp(e.target.value);
-};
-
-const recaptchaConfig=()=>{
-
-  const auth = getAuth();
-  window.recaptchaVerifier = new RecaptchaVerifier(
-    "sign-in-button",
-    {
-      size: "invisible",
-      callback: (response) => {
-        // reCAPTCHA solved, allow signInWithPhoneNumber.
-        onSignInSubmit();
-        console.log("recaptcha verified")
-      },defaultCountry:"IN"
-    },
-    auth
-  );
-}
-
-const onSignInSubmit=()=>{
-  recaptchaConfig();
-    const phoneNumber = "+91"+phone;
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
 
@@ -67,30 +67,35 @@ const onSignInSubmit=()=>{
         // user in with confirmationResult.confirm(code).
         window.confirmationResult = confirmationResult;
         setRequestotp(true);
-        console.log("OTP has been sent")
+        console.log("OTP has been sent");
       })
       .catch((error) => {
         // Error; SMS not sent
         // ...
-        console.log("OTP error")
+        console.log("OTP error");
       });
-}
+  };
 
-const onSubmitOTP=()=>{
-  const code = otp;
-  console.log(code)
-window.confirmationResult.confirm(code).then((result) => {
-  // User signed in successfully.
-  const user = result.user;
-  alert("User signed in successfully");
-  console.log(JSON.stringify(user))
-  // ...
-}).catch((error) => {
-  // User couldn't sign in (bad verification code?)
-  // ...
-  alert("user sign in error")
-});
-}
+  const onSubmitOTP = () => {
+    const code = otp;
+    console.log(code);
+    window.confirmationResult
+      .confirm(code)
+      .then((result) => {
+        // User signed in successfully.
+        const user = result.user;
+        alert("User signed in successfully");
+        userExistsCheck();
+        Loginpopupclose();
+        console.log(JSON.stringify(user));
+        // ...
+      })
+      .catch((error) => {
+        // User couldn't sign in (bad verification code?)
+        // ...
+        alert("user sign in error");
+      });
+  };
 
   return (
     <div id="login-popup-main-wrap">
@@ -101,7 +106,7 @@ window.confirmationResult.confirm(code).then((result) => {
             To Quickly Find Your Favourite Items Saved Addresses And Payments{" "}
           </div>
           <div id="user-login-column-one-image-wrap">
-            <img src="./Auth-img/login.png" alt="" />
+            <img src="Auth-img/login.png" alt="" />
           </div>
         </div>
         {/* phone number input */}

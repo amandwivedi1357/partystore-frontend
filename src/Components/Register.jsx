@@ -1,7 +1,43 @@
 import "./Register.css";
 import { RxCross1 } from "react-icons/rx";
+import { useState ,useEffect } from "react";
+import axios from "axios";
+import {
+  getAuth
+} from "firebase/auth";
 
 export const Register = ({registerpopupclose,handleRegister}) => {
+
+    const [username, setUsername] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone , setPhone] =useState(null);
+
+ const handleNameChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+ const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  }; 
+
+
+  const handlePhoneNumber= () =>{
+     let user_details = getAuth().currentUser;
+     setPhone(user_details.phoneNumber);
+  }
+
+useEffect(() => {
+  handlePhoneNumber()
+  },[]);
+
+  const handleUserData=()=>{
+    axios.post("http://localhost:5000/auth", {
+      "username": username,
+      "email": email,
+      "phone": phone,
+    });
+  }
+
   return (
     <div id="register-popup-main-wrap">
       <div id="user-register-main-wrapper">
@@ -16,15 +52,20 @@ export const Register = ({registerpopupclose,handleRegister}) => {
         </div>
 
         <div id="user-register-column-two-wrap">
-          <RxCross1 id="user-register-popup-close-button" onClick={registerpopupclose}/>
+          <RxCross1
+            id="user-register-popup-close-button"
+            onClick={registerpopupclose}
+          />
           <label htmlFor="first_name" id="user-register-column-two-name-label">
             Name
           </label>
           <input
             type="text"
-            placeholder="Enter Phone Number"
+            placeholder="Enter Name"
             className="user-register-column-two-input"
             name="first_name"
+            onChange={handleNameChange}
+            value={username}
           />
           <label htmlFor="email_id" id="user-register-column-two-email-label">
             Email ID
@@ -34,9 +75,11 @@ export const Register = ({registerpopupclose,handleRegister}) => {
             placeholder="Enter Your Email ID"
             className="user-register-column-two-input"
             name="email_id"
+            onChange={handleEmailChange}
+            value={email}
           />
           <br />
-          <button id="user-register-column-two-continue-button">
+          <button id="user-register-column-two-continue-button" onClick={handleUserData}>
             Continue
           </button>
         </div>
