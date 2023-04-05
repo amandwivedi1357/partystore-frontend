@@ -9,6 +9,8 @@ import { Login } from "./Login.jsx";
 import { Cart } from "./Cart.jsx";
 import { Register } from "./Register.jsx";
 import { getAuth, signOut } from "firebase/auth";
+import { useSelector, useDispatch } from "react-redux";
+import { getUserSuccess } from "../Redux/actions";
 
 export const Navbar = () => {
   //Autentication popup state handling
@@ -16,7 +18,15 @@ export const Navbar = () => {
   const [loginToggle, setloginToggle] = useState(false);
   const [registerToggle, setregisterToggle] = useState(false);
   const [isLoggedin ,setisLoggedin] = useState(false);
-  const [userRegister ,setUserRegister] = useState({});
+
+const { user, isError, isLoading } = useSelector((state) => ({
+  user: state.user,
+  isError: state.isError,
+  isLoading: state.isLoading,
+}));
+
+
+const dispatch = useDispatch();
 
 useEffect(() => {
   const auth = getAuth();
@@ -35,6 +45,7 @@ useEffect(() => {
     signOut(auth)
       .then(() => {
         setisLoggedin(false);
+        dispatch(getUserSuccess(null));
         // Sign-out successful. 
         console.log("user signout successful")
       })
@@ -143,6 +154,7 @@ useEffect(() => {
             //     />
             //   </div>
             <div id="navbar-user-login-button-wrap">
+              {user && <div>{user[0].username}</div>}
               <button onClick={handleLogout}>Logout</button>
             </div>
             // </div>

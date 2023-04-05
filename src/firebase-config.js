@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDKMm3__B6Fs30cpWmq_wZlXGGny_hb3NE",
-  authDomain: "zinggalas.firebaseapp.com",
-  projectId: "zinggalas",
-  storageBucket: "zinggalas.appspot.com",
-  messagingSenderId: "202013466837",
-  appId: "1:202013466837:web:14c3c4d32ceac68ac2025c",
+  apiKey: "AIzaSyDJhIyvCJm36AgY0NnnKrF3sdLn3gL0EFY",
+  authDomain: "partstore-auth.firebaseapp.com",
+  projectId: "partstore-auth",
+  storageBucket: "partstore-auth.appspot.com",
+  messagingSenderId: "111660951569",
+  appId: "1:111660951569:web:d3313ae1a21ca11270e9b0",
 };
 
 const app = initializeApp(firebaseConfig);

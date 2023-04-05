@@ -6,13 +6,26 @@ import {
   RecaptchaVerifier,
   signInWithPhoneNumber,
 } from "firebase/auth";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserData } from "../Redux/actions";
 import { firebase } from "../firebase-config.js";
 
-export const Login = ({ Loginpopupclose, handleSignup, handleRegister}) => {
+export const Login = ({ Loginpopupclose, handleRegister}) => {
   const [phone, setPhone] = useState("");
   const [otp, setOtp] = useState("");
   const [requestotp, setRequestotp] = useState(false);
-  const [user, setUser] = useState("");
+
+  const dispatch = useDispatch();
+
+  const { user, isError, isLoading } = useSelector((state) => ({
+    user: state.user,
+    isError: state.isError,
+    isLoading: state.isLoading,
+  }));
+
+  console.log(user)
+
 
   const handlePhoneChange = (e) => {
     setPhone(e.target.value);
@@ -22,6 +35,7 @@ export const Login = ({ Loginpopupclose, handleSignup, handleRegister}) => {
     setOtp(e.target.value);
   };
 
+
   const userExistsCheck = () => {
     let userData = getAuth().currentUser;
     if (userData !== null) {
@@ -29,7 +43,8 @@ export const Login = ({ Loginpopupclose, handleSignup, handleRegister}) => {
         handleRegister();
         console.log("user for the first time", userData);
       } else {
-        console.log("user already present", userData.uid);
+        dispatch(getUserData(phone));
+        console.log("user already present", userData);
       }
     } else {
       console.log("please login in");
@@ -56,7 +71,6 @@ export const Login = ({ Loginpopupclose, handleSignup, handleRegister}) => {
   const onSignInSubmit = () => {
     recaptchaConfig();
     const phoneNumber = "+91" + phone;
-
     console.log(phoneNumber);
     const appVerifier = window.recaptchaVerifier;
 
@@ -136,10 +150,7 @@ export const Login = ({ Loginpopupclose, handleSignup, handleRegister}) => {
 
             <div id="user-login-column-two-new-user-redirect-wrap">
               <span>New To zinggalas ?</span>
-              <span
-                id="user-login-column-two-new-user-redirect-div"
-                onClick={handleSignup}
-              >
+              <span id="user-login-column-two-new-user-redirect-div">
                 Create an account
               </span>
             </div>
@@ -175,10 +186,7 @@ export const Login = ({ Loginpopupclose, handleSignup, handleRegister}) => {
 
             <div id="user-login-otp-column-two-resend-code-wrap">
               <span>Did'nt recieve code?</span>
-              <span
-                id="user-login-column-two-new-user-redirect-div"
-                onClick={handleSignup}
-              >
+              <span id="user-login-column-two-new-user-redirect-div">
                 Resend Code
               </span>
             </div>

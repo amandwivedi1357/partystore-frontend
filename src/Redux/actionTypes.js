@@ -1,0 +1,3 @@
+export const GETUSER_REQ = "GETUSER_REQ";
+export const GETUSER_SUCCESS = "GETUSER_SUCCESS";
+export const GETUSER_FAILURE = "GETUSER_FAILURE";

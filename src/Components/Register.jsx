@@ -5,12 +5,16 @@ import axios from "axios";
 import {
   getAuth
 } from "firebase/auth";
+import { useDispatch, useSelector } from "react-redux";
+import { getUserData } from "../Redux/actions";
 
 export const Register = ({registerpopupclose,handleRegister}) => {
 
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [phone , setPhone] =useState(null);
+
+      const dispatch = useDispatch();
 
  const handleNameChange = (e) => {
     setUsername(e.target.value);
@@ -31,11 +35,14 @@ useEffect(() => {
   },[]);
 
   const handleUserData=()=>{
-    axios.post("http://localhost:5000/auth", {
-      "username": username,
-      "email": email,
-      "phone": phone,
-    });
+    axios
+      .post("http://localhost:5000/auth", {
+        username: username,
+        email: email,
+        phone: phone,
+      })
+      .then(() => dispatch(getUserData(phone)))
+      .then(registerpopupclose());
   }
 
   return (
