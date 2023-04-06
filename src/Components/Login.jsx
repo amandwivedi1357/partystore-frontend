@@ -120,7 +120,7 @@ export const Login = ({ Loginpopupclose, handleRegister}) => {
             To Quickly Find Your Favourite Items Saved Addresses And Payments{" "}
           </div>
           <div id="user-login-column-one-image-wrap">
-            <img src="Auth-img/login.png" alt="" />
+            <img src="/Auth-img/login.png" alt="" />
           </div>
         </div>
         {/* phone number input */}

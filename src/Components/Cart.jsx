@@ -2,14 +2,23 @@ import "./Cart.css"
 import { BiArrowBack } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BsArrowRight } from "react-icons/bs";
+import { useSelector } from "react-redux";
 
 export const Cart = ({ cartToggleClose }) => {
+
+  const { user, isError, isLoading } = useSelector((state) => ({
+    user: state.user,
+    isError: state.isError,
+    isLoading: state.isLoading,
+  }));
+
+
   return (
     <div id="cart-popup-main-wrapper">
       <div id="cart-popup-header-wrap">
         <BiArrowBack onClick={cartToggleClose} />
         <div>Cart</div>
-        <div>3 items</div>
+        {user && (<div>{user[0].cartItems.length}</div>)}
         <div>View Wishlist</div>
       </div>
 
