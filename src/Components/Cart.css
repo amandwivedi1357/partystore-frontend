@@ -52,6 +52,11 @@
   margin-left: 60px;
 }
 
+#cart-products-main-wrapper{
+overflow-y: scroll;
+height: 300px;
+}
+
 .cart-product-image-title-description-wrap {
   display: flex;
 }

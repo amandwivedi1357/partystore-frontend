@@ -18,19 +18,34 @@
   text-align: left;
 }
 
-#navbar-dropdown-celebrations-section-content-row01 > div {
+#navbar-dropdown-celebrations-section-content-row01 > a > div {
   margin-bottom: 20px;
   cursor: pointer;
 }
 
-#navbar-dropdown-celebrations-section-content-row02 > div {
+#navbar-dropdown-celebrations-section-content-row02 > a >div {
   margin-bottom: 20px;
   cursor: pointer;
 }
 
-#navbar-dropdown-celebrations-section-content-row03 > div {
+#navbar-dropdown-celebrations-section-content-row03 >a> div {
   margin-bottom: 20px;
   cursor: pointer;
+}
+
+#navbar-dropdown-celebrations-section-content-row01 >a{
+  text-decoration: none;
+  color: black;
+}
+
+#navbar-dropdown-celebrations-section-content-row02 >a{
+  text-decoration: none;
+  color: black;
+}
+
+#navbar-dropdown-celebrations-section-content-row03 >a{
+  text-decoration: none;
+  color: black;
 }
 
 #navbar-dropdown-celebrations-section-content-row04{

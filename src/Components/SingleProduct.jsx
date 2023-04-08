@@ -6,12 +6,19 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { MdOutlineDone } from 'react-icons/md';
 import { RxCross2 } from 'react-icons/rx';
-
+import { useSelector } from "react-redux";
 
 export const SingleProduct=()=>{
 
    let { category ,id} = useParams();
     const [productdata, setProductData] = useState();
+
+    const { user, isError, isLoading } = useSelector((state) => ({
+    user: state.user,
+    isError: state.isError,
+    isLoading: state.isLoading,
+  }));
+
 
     useEffect(() => {
       axios(`http://localhost:5000/celebration/${category}/${id}`)
@@ -19,6 +26,21 @@ export const SingleProduct=()=>{
         .catch((err) => console.log(err));
     },[category,id]);
 
+const handleCart=()=>{
+  if (user){
+     axios
+       .post(`http://localhost:5000/cart/${user[0]._id}`, {
+         productName: productdata.category+"-"+productdata.package,
+         description: productdata.description,
+         price: productdata.price,
+         image: productdata.images[0],
+       })
+       .then((res) => console.log(res.data));
+     } 
+else{
+  alert("please login to add to cart")
+}
+}
     return (
       <>
         {productdata && (
@@ -85,7 +107,7 @@ export const SingleProduct=()=>{
                 </div>
               </div>
               <div id="singleproduct-product-details-buttons-wrap">
-                <button id="singleproduct-product-details-cart-button">
+                <button id="singleproduct-product-details-cart-button" onClick={handleCart}>
                   Add to cart
                 </button>
                 <button id="singleproduct-product-details-book-now-button">
