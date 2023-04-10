@@ -11,7 +11,7 @@ export const CelebrationPackages = () => {
    const [categorydata, setCategorydata] = useState([]);
 
    useEffect(() => {
-     axios(`http://localhost:5000/celebration/${category}`)
+     axios(`https://alert-garment-foal.cyclic.app/celebration/${category}`)
        .then((res) => setCategorydata(res.data))
        .catch((err) => console.log(err));
    }, [category]);

@@ -21,7 +21,7 @@ export const SingleProduct=()=>{
 
 
     useEffect(() => {
-      axios(`http://localhost:5000/celebration/${category}/${id}`)
+      axios(`https://alert-garment-foal.cyclic.app/celebration/${category}/${id}`)
         .then((res) => setProductData(res.data))
         .catch((err) => console.log(err));
     },[category,id]);
@@ -29,7 +29,7 @@ export const SingleProduct=()=>{
 const handleCart=()=>{
   if (user){
      axios
-       .post(`http://localhost:5000/cart/${user[0]._id}`, {
+       .post(`https://alert-garment-foal.cyclic.app/cart/${user[0]._id}`, {
          productName: productdata.category+"-"+productdata.package,
          description: productdata.description,
          price: productdata.price,

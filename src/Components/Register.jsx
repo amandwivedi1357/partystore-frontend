@@ -36,7 +36,7 @@ useEffect(() => {
 
   const handleUserData=()=>{
     axios
-      .post("http://localhost:5000/auth", {
+      .post("https://alert-garment-foal.cyclic.app/auth", {
         username: username,
         email: email,
         phone: phone,

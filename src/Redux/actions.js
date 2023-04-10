@@ -31,7 +31,9 @@ export const getUserData =(phone) =>(dispatch) => {
     dispatch(getUserReq());
     console.log(phone)
      axios
-       .get(`http://localhost:5000/auth/login/${"+91"+phone}`)
+       .get(
+         `https://alert-garment-foal.cyclic.app/auth/login/${"+91" + phone}`
+       )
        .then((res) => dispatch(getUserSuccess(res.data)))
        .catch(() => dispatch(getUserFailure()));
 };
