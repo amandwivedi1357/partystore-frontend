@@ -24,9 +24,6 @@ export const Login = ({ Loginpopupclose, handleRegister}) => {
     isLoading: state.isLoading,
   }));
 
-  console.log(user)
-
-
   const handlePhoneChange = (e) => {
     setPhone(e.target.value);
   };
@@ -98,7 +95,6 @@ export const Login = ({ Loginpopupclose, handleRegister}) => {
       .then((result) => {
         // User signed in successfully.
         const user = result.user;
-        alert("User signed in successfully");
         userExistsCheck();
         Loginpopupclose();
         console.log(JSON.stringify(user));

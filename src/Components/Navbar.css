@@ -45,17 +45,67 @@
 
 #navbar-second-section-user-details-wrap {
   display: flex;
-  justify-content: space-around;
   width: 20%;
   align-items: center;
+  /* border: 1px solid red; */
+  justify-content: space-between;
+  margin-right: 30px;
 }
 
- #navbar-second-section-user-avatar-wrap {
-  width: 13%;
+ #navbar-second-section-user-avatar-name-wrap {
+  width: 70%;
+  display: flex;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#navbar-user-logout-button-wrap{
+  display: flex;
+  position: absolute;
+  top: 95px;
+  right: 170px;
+  width: 10%;
+  justify-content: space-evenly;
+  font-size: 14px;
+  --size: 140px;
+  --padding: 5px;
+  width: calc(var(--size) - var(--padding));
+  height: calc(var(--size) / 4);
+  background: white;
+  padding: var(--padding);
+box-shadow: 4px 4px 25px rgba(0, 0, 0, 0.16);
+}
+
+
+#navbar-user-logout-button-wrap:after {
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 13%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: white;
+  height: 14px;
+  width: 14px;
+  border-top: 0.5px solid lightgrey;
+}
+#navbar-user-logout-button-icon{
+  margin-top: 5px;
+}
+
+#navbar-user-logout-button-main:hover{
+  color: #0a0196;
+}
+
+#navbar-second-section-user-avatar{
+   width: 15%;
+}
+#navbar-user-name-logout-wrap{
+  width:90%;
 }
 
 #navbar-second-section-wishlist-logo-wrap {
-  width: 10%;
+  width:  10%;
+  cursor: pointer;
 }
 
 #navbar-second-section-cart-logo-wrap {
@@ -164,3 +214,4 @@
 #navbar-user-login-button-wrap{
 width: 40%;
 }
+

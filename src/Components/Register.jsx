@@ -36,7 +36,7 @@ useEffect(() => {
 
   const handleUserData=()=>{
     axios
-      .post("https://alert-garment-foal.cyclic.app/auth", {
+      .post("https://angry-leather-jacket-wasp.cyclic.app/auth", {
         username: username,
         email: email,
         phone: phone,
@@ -54,7 +54,7 @@ useEffect(() => {
             You are just one step away from amazing party decoration offers.
           </div>
           <div id="user-register-column-one-image-wrap">
-            <img src="./Auth-img/login.png" alt="" />
+            <img src="/Auth-img/login.png" alt="" />
           </div>
         </div>
 

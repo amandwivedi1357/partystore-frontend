@@ -1,5 +1,6 @@
 import "./Navbar.css";
 import { CiSearch } from "react-icons/ci";
+import { AiOutlineLogout } from "react-icons/ai";
 import { useState, useEffect } from "react";
 import { BirthdayDrop } from "./Dropdowns/BirthdayDrop";
 import { CelebrationDrop } from "./Dropdowns/CelebrationDrop";
@@ -18,6 +19,7 @@ export const Navbar = () => {
   const [loginToggle, setloginToggle] = useState(false);
   const [registerToggle, setregisterToggle] = useState(false);
   const [isLoggedin ,setisLoggedin] = useState(false);
+  const [logoutToggle ,setLogoutToggle] = useState(false);
 
 const { user, isError, isLoading } = useSelector((state) => ({
   user: state.user,
@@ -29,10 +31,8 @@ const { user, isError, isLoading } = useSelector((state) => ({
 const dispatch = useDispatch();
 
 useEffect(() => {
-  const auth = getAuth();
-  const user = auth.currentUser;
   user!==null ? setisLoggedin(true) : setisLoggedin(false);
-}, [loginToggle]);
+}, [user]);
 
   const handleLoginPopup = () => {
     setregisterToggle(false);
@@ -145,28 +145,45 @@ useEffect(() => {
           )}
 
           {isLoggedin === true && (
-            // <div id="navbar-second-section-user-avatar-wrap">
-            //   <div>
-            //     <img
-            //       src="/Navbar-img/user.png"
-            //       alt="user"
-            //       id="navbar-second-section-user-logo"
-            //     />
-            //   </div>
-            <div id="navbar-user-login-button-wrap">
-              {user && <div>{user[0].username}</div>}
-              <button onClick={handleLogout}>Logout</button>
+            <div
+              id="navbar-second-section-user-avatar-name-wrap"
+              onMouseEnter={() => setLogoutToggle(true)}
+              onMouseLeave={() => setLogoutToggle(false)}
+            >
+              <div id="navbar-second-section-user-avatar">
+                <img
+                  src="/Navbar-img/user.png"
+                  alt="user"
+                  id="navbar-second-section-user-logo"
+                />
+              </div>
+              <div id="navbar-user-name-logout-wrap">
+                {user && <div>{user[0].username}</div>}
+              </div>
+              {logoutToggle === true && (
+                <div id="navbar-user-logout-button-wrap">
+                  <AiOutlineLogout id="navbar-user-logout-button-icon" />
+                  <div
+                    onClick={handleLogout}
+                    id="navbar-user-logout-button-main"
+                  >
+                    Logout
+                  </div>
+                </div>
+              )}
             </div>
-            // </div>
           )}
 
           <div id="navbar-second-section-wishlist-logo-wrap">
-            <img
-              src="/Navbar-img/wishlist.png"
-              alt="wishlist"
-              id="navbar-second-section-wishlist-logo"
-            />
+            <a href="/wishlist">
+              <img
+                src="/Navbar-img/wishlist.png"
+                alt="wishlist"
+                id="navbar-second-section-wishlist-logo"
+              />
+            </a>
           </div>
+
           <div
             id="navbar-second-section-cart-logo-wrap"
             onClick={handleCartToggle}

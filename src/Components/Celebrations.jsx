@@ -9,7 +9,7 @@ export const Celebrations = () => {
   const [celebrationdata, setCelebrationData] = useState([]);
 
   useEffect(() => {
-    axios("https://alert-garment-foal.cyclic.app/celebration")
+    axios("https://angry-leather-jacket-wasp.cyclic.app/celebration")
       .then((res) => setCelebrationData(res.data))
       .catch((err) => console.log(err));
       

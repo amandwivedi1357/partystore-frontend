@@ -2,30 +2,39 @@ import "./Cart.css"
 import { BiArrowBack } from "react-icons/bi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { BsArrowRight } from "react-icons/bs";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { getCartData } from "../Redux/actions";
+import { useEffect } from "react";
 
 export const Cart = ({ cartToggleClose }) => {
 
-  const { user, isError, isLoading } = useSelector((state) => ({
-    user: state.user,
+  const { user,cart, isError, isLoading } = useSelector((state) => ({
+    user:state.user,
+    cart: state.cart,
     isError: state.isError,
     isLoading: state.isLoading,
   }));
-
-
+ 
+  const dispatch = useDispatch();
+    
+ 
+ useEffect(() => {
+     if(user!=null){dispatch(getCartData(user[0]._id))}
+ },[cart.cartItems] )
+ 
   return (
     <>
-      {user && (
+      {user!=null && (
         <div id="cart-popup-main-wrapper">
           <div id="cart-popup-header-wrap">
             <BiArrowBack onClick={cartToggleClose} />
             <div>Cart</div>
-            {user && <div>{user[0].cartItems.length}</div>}
+            {cart.cartItems && <div>{cart.cartItems.length}</div>}
             <div>View Wishlist</div>
           </div>
           <div id="cart-products-main-wrapper">
-            {user &&
-              user[0].cartItems.map((product) => {
+            {cart.cartItems &&
+              cart.cartItems.map((product) => {
                 return (
                   <div className="cart-product-wrap">
                     <div className="cart-product-image-title-description-wrap">
@@ -65,7 +74,7 @@ export const Cart = ({ cartToggleClose }) => {
           <div className="cart-total-pay-wrap">
             <div>Price Details</div>
             <div className="cart-total-pay-wrap-products-quantity-price-wrap">
-              <div>Cart (MRP 3 items)</div>
+              <div>Cart (MRP {cart.cartItems.length} items)</div>
               <div>
                 <span>₹</span>2999
               </div>

@@ -21,7 +21,9 @@ export const SingleProduct=()=>{
 
 
     useEffect(() => {
-      axios(`https://alert-garment-foal.cyclic.app/celebration/${category}/${id}`)
+      axios(
+        `https://angry-leather-jacket-wasp.cyclic.app/celebration/${category}/${id}`
+      )
         .then((res) => setProductData(res.data))
         .catch((err) => console.log(err));
     },[category,id]);
@@ -29,8 +31,8 @@ export const SingleProduct=()=>{
 const handleCart=()=>{
   if (user){
      axios
-       .post(`https://alert-garment-foal.cyclic.app/cart/${user[0]._id}`, {
-         productName: productdata.category+"-"+productdata.package,
+       .post(`https://angry-leather-jacket-wasp.cyclic.app/cart/${user[0]._id}`, {
+         productName: productdata.category + "-" + productdata.package,
          description: productdata.description,
          price: productdata.price,
          image: productdata.images[0],
