@@ -32,9 +32,14 @@
   color: #455A64;
 }
 
-#navbar-dropdown-birthday-section-content-row02 > div {
+#navbar-dropdown-birthday-section-content-row02 >a> div {
   margin-bottom: 20px;
   cursor: pointer;
+  color: #455A64;
+}
+
+#navbar-dropdown-birthday-section-content-row02 >a{
+text-decoration: none;
 }
 
 #navbar-dropdown-birthday-section-content-row03 {

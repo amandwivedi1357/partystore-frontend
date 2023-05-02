@@ -378,7 +378,7 @@
   margin-right: 10px;
 }
 
-.homepage-themes-section-wrap {
+/* .homepage-themes-section-wrap {
   background: rgba(255, 212, 1, 0.31);
   padding-top: 36px;
   padding-bottom: 36px;
@@ -491,7 +491,7 @@
   width: 89%;
   margin: auto;
   margin-top: 25px;
-}
+} */
 
 .homepage-testimonial-section-slider-component {
   width: 100%;
@@ -716,4 +716,195 @@
   background-image: url("../bg-img/grid03.jpeg");
   background-size:cover;
   background-position:center;
+}
+
+#homepage-corporate-decorations-section-wrap{
+  background: #FFD401;
+  padding-top: 39px;
+  padding-bottom: 60px;
+}
+
+.homepage-corporate-decorations-single-card-wrap{
+  width: 21%;
+  background: white;
+  padding: 5px;
+}
+
+.homepage-corporate-decorations-single-card-img-wrap{
+  width: 100%;
+  height: 65%;
+}
+
+.homepage-corporate-decorations-single-card-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#homepage-corporate-decorations-cards-main-wrap{
+  width: 89%;
+  height: 350px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+#homepage-corporate-decorations-main-headline {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.015em;
+}
+
+#homepage-corporate-decorations-sub-headline {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.015em;
+  margin-top: 5px;
+}
+
+.homepage-corporate-decorations-single-card-title{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.001em;
+  margin-top: 8px;
+}
+
+.homepage-corporate-decorations-single-card-rating{
+   width: 40%;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.homepage-corporate-decorations-single-card-description{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.001em;
+  text-align: center;
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.65);
+  margin-top: 15px;
+}
+
+#homepage-wedding-anniversary-packages-section-wrap {
+  display: grid;
+  width: 65%;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: auto;
+  column-gap: 60px;
+  row-gap: 40px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  /* border: 1px solid red; */
+}
+
+.homepage-wedding-anniversary-single-package-card-wrap {
+  padding: 5px;
+  border: 0.5px solid rgba(112, 112, 112, 0.37);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.homepage-wedding-anniversary-single-package-card-image-wrap {
+  width: 100%;
+  height: 180px;
+}
+
+.homepage-wedding-anniversary-single-package-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.homepage-wedding-anniversary-single-package-card-title-rating-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.homepage-wedding-anniversary-single-package-card-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.001em;
+}
+
+.homepage-wedding-anniversary-single-package-card-rating {
+  margin-top: 5px;
+}
+
+.homepage-wedding-anniversary-single-package-card-price {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.001em;
+  text-align: left;
+  margin-left: 5px;
+}
+
+.homepage-wedding-anniversary-single-package-card-price > :nth-child(1) {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.homepage-wedding-anniversary-single-package-card-description {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.001em;
+  text-align: left;
+  color: rgba(0, 0, 0, 0.65);
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.homepage-wedding-anniversary-single-package-card-buy-now-button {
+  background-color: #0a0196;
+  color: white;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  width: 98%;
+  padding: 10px 0px 10px 0px;
+  border: none;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+
+.homepage-wedding-anniversary-single-package-card-wishlist-icon{
+  position: absolute;
+  color: white;
+  right: 5%;
+  top: 3%;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#homepage-wedding-anniversary-main-headline {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0.015em;
+}
+
+#homepage-wedding-anniversary-sub-headline {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.015em;
+  margin-top: 5px;
+}
+
+#homepage-wedding-anniversary-section-wrap{
+  background: #FCE7EE;
+  padding-top: 39px;
+  padding-bottom: 10px; 
 }

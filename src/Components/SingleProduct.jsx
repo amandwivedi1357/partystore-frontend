@@ -9,8 +9,9 @@ import { RxCross2 } from 'react-icons/rx';
 import { useSelector } from "react-redux";
 
 export const SingleProduct=()=>{
-
-   let { category ,id} = useParams();
+   
+   let {category ,id} = useParams();
+   
     const [productdata, setProductData] = useState();
 
     const { user, isError, isLoading } = useSelector((state) => ({

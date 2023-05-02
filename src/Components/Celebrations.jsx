@@ -4,15 +4,15 @@ import Stack from "@mui/material/Stack";
 import Pagination from "@mui/material/Pagination";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 export const Celebrations = () => {
   const [celebrationdata, setCelebrationData] = useState([]);
 
   useEffect(() => {
-    axios("https://angry-leather-jacket-wasp.cyclic.app/celebration")
+    axios(`https://angry-leather-jacket-wasp.cyclic.app/celebration`)
       .then((res) => setCelebrationData(res.data))
       .catch((err) => console.log(err));
-      
   }, []);
 
   return (

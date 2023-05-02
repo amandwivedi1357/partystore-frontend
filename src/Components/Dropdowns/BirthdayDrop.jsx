@@ -9,18 +9,26 @@ export const BirthdayDrop=()=>{
         </div>
 
         <div id="navbar-dropdown-birthday-section-content-row02">
-          <div>Young Boy’s</div>
-          <div>Cute Girl’s</div>
-          <div>Smart Boy’s </div>
-          <div>Fab Girls</div>
+          <a href="/birthday/prince">
+            <div>Prince</div>
+          </a>
+          <a href="/birthday/princess">
+            <div>Princess</div>
+          </a>
+          <a href="/birthday/king">
+            <div>King</div>
+          </a>
+          <a href="/birthday/queen">
+            <div>Queen</div>
+          </a>
         </div>
 
-        <div id="navbar-dropdown-birthday-section-content-row03">
+        {/* <div id="navbar-dropdown-birthday-section-content-row03">
           <div>Themes</div>
           <div>Themes</div>
           <div>Themes</div>
           <div>Themes</div>
-        </div>
+        </div> */}
       </div>
     );
 }

@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
-import { getAuth } from "firebase/auth";
+import { TiHeartFullOutline } from "react-icons/ti";
 
 export const Home = () => {
   var slider01_settings = {
@@ -31,16 +31,16 @@ export const Home = () => {
     variableWidth: true,
   };
 
-  var slider03_settings = {
-    className: "homepage-themes-section-slider-component",
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 2,
-    arrows: true,
-    variableWidth: true,
-  };
+  // var slider03_settings = {
+  //   className: "homepage-themes-section-slider-component",
+  //   dots: false,
+  //   infinite: true,
+  //   speed: 500,
+  //   slidesToShow: 3,
+  //   slidesToScroll: 2,
+  //   arrows: true,
+  //   variableWidth: true,
+  // };
 
   var slider04_settings = {
     className: "homepage-testimonial-section-slider-component",
@@ -405,7 +405,7 @@ export const Home = () => {
 
       {/* around the world decoration section starts here */}
 
-      <div className="homepage-themes-section-wrap">
+      {/* <div className="homepage-themes-section-wrap">
         <div className="homepage-themes-section-title">
           Around the world decoration
         </div>
@@ -521,612 +521,226 @@ export const Home = () => {
             </div>
           </Slider>
         </div>
-      </div>
+      </div> */}
       {/* around the world decoration section ends here */}
 
-      {/* office in house decor section starts here */}
-
-      <div className="homepage-themes-section-wrap">
-        <div className="homepage-themes-section-title">
-          Office in house decor
+      {/* corporate decor section starts here */}
+      <div id="homepage-corporate-decorations-section-wrap">
+        <div id="homepage-corporate-decorations-main-headline">
+          Corporate Festive Decors
         </div>
-
-        <div id="homepage-office-in-house-decor-section-slider-wrap">
-          <Slider {...slider03_settings}>
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod01.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Airport theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
+        <div id="homepage-corporate-decorations-sub-headline">
+          Celebrate festivals with zinggalas decor
+        </div>
+        <div id="homepage-corporate-decorations-cards-main-wrap">
+          <div className="homepage-corporate-decorations-single-card-wrap">
+            <div className="homepage-corporate-decorations-single-card-img-wrap">
+              <img
+                src="https://deowgxgt4vwfe.cloudfront.net/uploads/1634389415_original.jpg"
+                alt=""
+                className="homepage-corporate-decorations-single-card-img"
+              />
             </div>
 
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod02.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Zack theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
+            <div className="homepage-corporate-decorations-single-card-title">
+              Navratri
+            </div>
+            <div className="homepage-corporate-decorations-single-card-rating">
+              <Stack spacing={1}>
+                <Rating name="read-only" value="5" readOnly size="small" />
+              </Stack>
             </div>
 
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod03.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
+            <div className="homepage-corporate-decorations-single-card-description">
+              Like to do things differently? Host A Congrats Party with
+              zinggalas
+            </div>
+          </div>
 
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Around the world theme
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
+          <div className="homepage-corporate-decorations-single-card-wrap">
+            <div className="homepage-corporate-decorations-single-card-img-wrap">
+              <img
+                src="https://deowgxgt4vwfe.cloudfront.net/uploads/1659441807_small.jpg"
+                alt=""
+                className="homepage-corporate-decorations-single-card-img"
+              />
             </div>
 
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod04.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Airport theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
+            <div className="homepage-corporate-decorations-single-card-title">
+              Independance Day
             </div>
-          </Slider>
+            <div className="homepage-corporate-decorations-single-card-rating">
+              <Stack spacing={1}>
+                <Rating name="read-only" value="5" readOnly size="small" />
+              </Stack>
+            </div>
+
+            <div className="homepage-corporate-decorations-single-card-description">
+              Like to do things differently? Host A Congrats Party with
+              zinggalas
+            </div>
+          </div>
+
+          <div className="homepage-corporate-decorations-single-card-wrap">
+            <div className="homepage-corporate-decorations-single-card-img-wrap">
+              <img
+                src="https://i.pinimg.com/originals/5e/16/af/5e16af559821852d24d0ebb80b00fdee.jpg"
+                alt=""
+                className="homepage-corporate-decorations-single-card-img"
+              />
+            </div>
+
+            <div className="homepage-corporate-decorations-single-card-title">
+              Janmashtami
+            </div>
+            <div className="homepage-corporate-decorations-single-card-rating">
+              <Stack spacing={1}>
+                <Rating name="read-only" value="5" readOnly size="small" />
+              </Stack>
+            </div>
+
+            <div className="homepage-corporate-decorations-single-card-description">
+              Like to do things differently? Host A Congrats Party with
+              zinggalas
+            </div>
+          </div>
+
+          <div className="homepage-corporate-decorations-single-card-wrap">
+            <div className="homepage-corporate-decorations-single-card-img-wrap">
+              <img
+                src="https://deowgxgt4vwfe.cloudfront.net/uploads/1659441807_small.jpg"
+                alt=""
+                className="homepage-corporate-decorations-single-card-img"
+              />
+            </div>
+
+            <div className="homepage-corporate-decorations-single-card-title">
+              Republic Day
+            </div>
+            <div className="homepage-corporate-decorations-single-card-rating">
+              <Stack spacing={1}>
+                <Rating name="read-only" value="5" readOnly size="small" />
+              </Stack>
+            </div>
+
+            <div className="homepage-corporate-decorations-single-card-description">
+              Like to do things differently? Host A Congrats Party with
+              zinggalas
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* office in house decor section ends here */}
+      {/* corporate decor section ends here */}
 
       {/* wedding anniversary section starts here */}
-
-      <div className="homepage-themes-section-wrap">
-        <div className="homepage-themes-section-title">Wedding Anniversary</div>
-
-        <div id="homepage-wedding-anniversary-section-slider-wrap">
-          <Slider {...slider03_settings}>
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod01.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
+      <div id="homepage-wedding-anniversary-section-wrap">
+      <div id="homepage-wedding-anniversary-main-headline">
+          Wedding Anniversary
+        </div>
+        <div id="homepage-wedding-anniversary-sub-headline">
+          Packages you’ll need to plan all your events
+        </div>
+        <div id="homepage-wedding-anniversary-packages-section-wrap">
+          <div className="homepage-wedding-anniversary-single-package-card-wrap">
+            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon"/>
+            <div className="homepage-wedding-anniversary-single-package-card-image-wrap">
+              <img
+                src="./Home-img/silver.jpeg"
+                alt=""
+                className="homepage-wedding-anniversary-single-package-card-image"
+              />
+            </div>
+            <div className="homepage-wedding-anniversary-single-package-card-title-rating-wrap">
+              <div className="homepage-wedding-anniversary-single-package-card-title">
+                Silver Package
               </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Airport theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
+              <div className="homepage-wedding-anniversary-single-package-card-rating">
+                <Stack spacing={1}>
+                  <Rating name="read-only" value="5" readOnly size="small" />
+                </Stack>
               </div>
             </div>
+            <div className="homepage-wedding-anniversary-single-package-card-price">
+              <span>₹</span>
+              <span>2999</span>
+            </div>
+            <div className="homepage-wedding-anniversary-single-package-card-description">
+              Wedding anniversary silver package. zinggalas event planning
+              redefined
+            </div>
+            <button className="homepage-wedding-anniversary-single-package-card-buy-now-button">
+              Book now
+            </button>
+          </div>
 
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod02.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
+          <div className="homepage-wedding-anniversary-single-package-card-wrap">
+            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon"/>
+            <div className="homepage-wedding-anniversary-single-package-card-image-wrap">
+              <img
+                src="./Home-img/gold.jpg"
+                alt=""
+                className="homepage-wedding-anniversary-single-package-card-image"
+              />
+            </div>
+            <div className="homepage-wedding-anniversary-single-package-card-title-rating-wrap">
+              <div className="homepage-wedding-anniversary-single-package-card-title">
+                Gold Package
               </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Zack theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
+              <div className="homepage-wedding-anniversary-single-package-card-rating">
+                <Stack spacing={1}>
+                  <Rating name="read-only" value="5" readOnly size="small" />
+                </Stack>
               </div>
             </div>
+            <div className="homepage-wedding-anniversary-single-package-card-price">
+              <span>₹</span>
+              <span>5999</span>
+            </div>
+            <div className="homepage-wedding-anniversary-single-package-card-description">
+              Wedding anniversary gold package. zinggalas event planning
+              redefined
+            </div>
+            <button className="homepage-wedding-anniversary-single-package-card-buy-now-button">
+              Book now
+            </button>
+          </div>
 
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod03.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
+          <div className="homepage-wedding-anniversary-single-package-card-wrap">
+            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon"/>
+            <div className="homepage-wedding-anniversary-single-package-card-image-wrap">
+              <img
+                src="./Home-img/platinum.jpg"
+                alt=""
+                className="homepage-wedding-anniversary-single-package-card-image"
+              />
+            </div>
+            <div className="homepage-wedding-anniversary-single-package-card-title-rating-wrap">
+              <div className="homepage-wedding-anniversary-single-package-card-title">
+                Platinum Package
               </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Around the world theme
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
+              <div className="homepage-wedding-anniversary-single-package-card-rating">
+                <Stack spacing={1}>
+                  <Rating name="read-only" value="5" readOnly size="small" />
+                </Stack>
               </div>
             </div>
-
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod04.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Airport theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
+            <div className="homepage-wedding-anniversary-single-package-card-price">
+              <span>₹</span>
+              <span>8499</span>
             </div>
-          </Slider>
+            <div className="homepage-wedding-anniversary-single-package-card-description">
+              Wedding anniversary silver package. zinggalas event planning
+              redefined
+            </div>
+            <button className="homepage-wedding-anniversary-single-package-card-buy-now-button">
+              Book now
+            </button>
+          </div>
+
+
         </div>
       </div>
-
       {/* wedding anniversary section ends here */}
-
-      {/* Baby Arrival section starts here */}
-
-      <div className="homepage-themes-section-wrap">
-        <div className="homepage-themes-section-title">Baby Arrival</div>
-
-        <div id="homepage-baby-arrival-section-slider-wrap">
-          <Slider {...slider03_settings}>
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod01.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Airport theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod02.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Zack theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod03.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Around the world theme
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod04.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Airport theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-          </Slider>
-        </div>
-      </div>
-
-      {/* Baby Arrival section ends here */}
-
-      {/* Showroom Inaugration section starts here */}
-
-      <div className="homepage-themes-section-wrap">
-        <div className="homepage-themes-section-title">
-          Showroom Inaugration
-        </div>
-
-        <div id="homepage-showroom-inaugration-section-slider-wrap">
-          <Slider {...slider03_settings}>
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod01.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Airport theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod02.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Zack theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod03.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Around the world theme
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod04.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Airport theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-          </Slider>
-        </div>
-      </div>
-
-      {/* Showroom Inaugration section ends here */}
-
-      {/* House Warming section starts here */}
-
-      <div className="homepage-themes-section-wrap">
-        <div className="homepage-themes-section-title">House Warming</div>
-
-        <div id="homepage-house-warming-section-slider-wrap">
-          <Slider {...slider03_settings}>
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod01.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Airport theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod02.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Zack theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod03.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Around the world theme
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-
-            <div className="homepage-themes-section-slider-slide">
-              <div className="homepage-themes-section-slide-img-wrap">
-                <img
-                  src="./Home-img/home-slider03-prod04.jpeg"
-                  alt=""
-                  className="homepage-themes-section-slide-img"
-                />
-              </div>
-
-              <div className="homepage-themes-section-slide-title-rating-wrap">
-                <div className="homepage-themes-section-slide-title">
-                  Airport theme decoration
-                </div>
-                <div className="homepage-themes-section-slide-rating">
-                  <Stack spacing={1}>
-                    <Rating name="read-only" value={5} readOnly size="small" />
-                  </Stack>
-                </div>
-              </div>
-
-              <div className="homepage-themes-section-slide-price-wrap">
-                <div>MRP</div>
-                <div>₹</div>
-                <div>2000</div>
-              </div>
-            </div>
-          </Slider>
-        </div>
-      </div>
-
-      {/* Showroom Inaugration section ends here */}
 
       {/* testimonial section starts here */}
 
@@ -1213,20 +827,13 @@ export const Home = () => {
         </div>
 
         <div id="homepage-celeb-moments-section-content-grid-wrap">
-          <div id="homepage-celeb-moments-section-content-grid-01">
-          </div>
-          <div id="homepage-celeb-moments-section-content-grid-02">
-          </div>
-          <div id="homepage-celeb-moments-section-content-grid-03">
-          </div>
-          <div id="homepage-celeb-moments-section-content-grid-04">
-          </div>
-          <div id="homepage-celeb-moments-section-content-grid-05">
-          </div>
-          <div id="homepage-celeb-moments-section-content-grid-06">
-          </div>
-          <div id="homepage-celeb-moments-section-content-grid-07">
-          </div>
+          <div id="homepage-celeb-moments-section-content-grid-01"></div>
+          <div id="homepage-celeb-moments-section-content-grid-02"></div>
+          <div id="homepage-celeb-moments-section-content-grid-03"></div>
+          <div id="homepage-celeb-moments-section-content-grid-04"></div>
+          <div id="homepage-celeb-moments-section-content-grid-05"></div>
+          <div id="homepage-celeb-moments-section-content-grid-06"></div>
+          <div id="homepage-celeb-moments-section-content-grid-07"></div>
         </div>
       </div>
       {/* celebration moments ends here */}

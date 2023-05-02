@@ -20,7 +20,7 @@ export const Cart = ({ cartToggleClose }) => {
  
  useEffect(() => {
      if(user!=null){dispatch(getCartData(user[0]._id))}
- },[cart.cartItems] )
+ },[] )
  
   return (
     <>
@@ -29,11 +29,11 @@ export const Cart = ({ cartToggleClose }) => {
           <div id="cart-popup-header-wrap">
             <BiArrowBack onClick={cartToggleClose} />
             <div>Cart</div>
-            {cart.cartItems && <div>{cart.cartItems.length}</div>}
+            {cart!=null && <div>{cart.cartItems.length}</div>}
             <div>View Wishlist</div>
           </div>
           <div id="cart-products-main-wrapper">
-            {cart.cartItems &&
+            {cart!=null &&
               cart.cartItems.map((product) => {
                 return (
                   <div className="cart-product-wrap">

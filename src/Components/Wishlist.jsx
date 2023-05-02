@@ -46,9 +46,9 @@ const handleCart = (productinfo) => {
       <>
       {user!=null && (
       <div id="wishlist-main-wrapper">
-        {wishlist.wishlist &&<div>My Wishlist ({wishlist.wishlist.length})</div>}
+        {wishlist!=null &&<div>My Wishlist ({wishlist.wishlist.length})</div>}
         <div className="wishlist-products-section-wrap">
-         {wishlist.wishlist &&
+         {wishlist!=null &&
               wishlist.wishlist.map((product) => {
                 return (
                   <div className="wishlist-single-product-card-wrap">
