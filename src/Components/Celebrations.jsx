@@ -4,7 +4,6 @@ import Stack from "@mui/material/Stack";
 import Pagination from "@mui/material/Pagination";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
 
 export const Celebrations = () => {
   const [celebrationdata, setCelebrationData] = useState([]);

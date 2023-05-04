@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { Home } from "../Components/Home";
 import { Celebrations } from "../Components/Celebrations";
+import { Products } from "../Components/Products";
 import { Birthdays } from "../Components/Birthdays";
 import { SingleProduct } from "../Components/SingleProduct.jsx";
 import { BirthdaySingleProduct } from "../Components/BirthdaySingleProduct.jsx";
@@ -35,6 +36,7 @@ export const MainRoutes = () => {
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/products" element={<Products />} />
       </Routes>
     </>
   );
