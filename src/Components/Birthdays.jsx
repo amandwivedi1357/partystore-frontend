@@ -10,7 +10,9 @@ export const Birthdays = () => {
   const [birthdaydata, setBirthdayData] = useState([]);
 
   useEffect(() => {
-    axios(`http://localhost:5000/birthday/${theme}`)
+    axios(
+      `https://angry-leather-jacket-wasp.cyclic.app/birthday/${theme}`
+    )
       .then((res) => setBirthdayData(res.data))
       .catch((err) => console.log(err));
   }, []);

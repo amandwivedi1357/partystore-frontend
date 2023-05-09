@@ -20,7 +20,9 @@ export const BirthdaySingleProduct = () => {
   }));
 
   useEffect(() => {
-    axios(`http://localhost:5000/birthday/${theme}/${category}/${id}`)
+    axios(
+      `https://angry-leather-jacket-wasp.cyclic.app/birthday/${theme}/${category}/${id}`
+    )
       .then((res) => setProductData(res.data))
       .catch((err) => console.log(err));
   }, [category, id]);

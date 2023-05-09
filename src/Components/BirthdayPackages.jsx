@@ -21,7 +21,7 @@ export const BirthdayPackages = () => {
 
   useEffect(() => {
     axios(
-      `http://localhost:5000/birthday/${theme}/${category}`
+      `https://angry-leather-jacket-wasp.cyclic.app/birthday/${theme}/${category}`
     )
       .then((res) => setCategorydata(res.data))
       .catch((err) => console.log(err));
