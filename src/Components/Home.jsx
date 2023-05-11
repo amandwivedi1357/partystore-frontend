@@ -31,16 +31,17 @@ export const Home = () => {
     variableWidth: true,
   };
 
-  // var slider03_settings = {
-  //   className: "homepage-themes-section-slider-component",
-  //   dots: false,
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 2,
-  //   arrows: true,
-  //   variableWidth: true,
-  // };
+  var slider03_settings = {
+    className: "homepage-banner-slider-component",
+    dots: true,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  };
 
   var slider04_settings = {
     className: "homepage-testimonial-section-slider-component",
@@ -61,25 +62,59 @@ export const Home = () => {
         <div id="homepage-packages-wrap">
           <ul id="homepage-packages-list-ul">
             <li>POPULAR PACKAGES</li>
-            <li>Around the world theme</li>
-            <li>Baby arrival</li>
-            <li>Dothi Function</li>
-            <li>House Warming</li>
-            <li>Office in house decor</li>
-            <li>Saree Function</li>
-            <li>Showroom Inauguration</li>
-            <li>The Party Store</li>
-            <li>Wedding Anniversary</li>
+            <a href="">
+              <li>Around the world theme</li>
+            </a>
+            <a href="/celebrations/Baby Arrival">
+              <li>Baby arrival</li>
+            </a>
+            <a href="/celebrations/Dhoti Function">
+              <li>Dothi Function</li>
+            </a>
+            <a href="/celebrations/House Warming">
+              <li>House Warming</li>
+            </a>
+            <a href="">
+              <li>Office in house decor</li>
+            </a>
+            <a href="/celebrations/Saree Function">
+              <li>Saree Function</li>
+            </a>
+            <a href="">
+              <li>Showroom Inauguration</li>
+            </a>
+            <a href="">
+              <li>The Party Store</li>
+            </a>
+            <a href="/celebrations/Wedding Anniversary">
+              <li>Wedding Anniversary</li>
+            </a>
           </ul>
         </div>
 
-        <div id="homepage-banner-wrap">
-          <img
-            src="./Home-img/banner.jpeg"
-            alt="banner"
-            id="homepage-banner-image"
-          />
-        </div>
+        <Slider {...slider03_settings}>
+          <div className="homepage-banner-wrap">
+            <img
+              src="./Home-img/banner.jpeg"
+              alt="banner"
+              className="homepage-banner-image"
+            />
+          </div>
+          <div className="homepage-banner-wrap">
+            <img
+              src="./Home-img/banner.jpeg"
+              alt="banner"
+              className="homepage-banner-image"
+            />
+          </div>
+          <div className="homepage-banner-wrap">
+            <img
+              src="./Home-img/banner.jpeg"
+              alt="banner"
+              className="homepage-banner-image"
+            />
+          </div>
+        </Slider>
       </div>
 
       {/* Banner section ends here */}
@@ -89,10 +124,9 @@ export const Home = () => {
         <img src="./Home-img/offer.png" alt="" />
         <div id="homepage-offer-statement-section-text">
           <div className="homepage-offer-statement-section-text-contents">
-            All your party need
+            All your party need one place
           </div>
           <div className="homepage-offer-statement-section-text-contents">
-            one place{" "}
             <span id="homepage-offer-statement-section-offer-text-content">
               Get up to 25% OFF{" "}
             </span>
@@ -103,66 +137,6 @@ export const Home = () => {
         </div>
       </div>
       {/* offer statement section ends here */}
-
-      {/* what are you celebrating section starts here */}
-      <div id="homepage-what-are-you-celeb-section-wrap">
-        <div id="homepage-what-are-you-celeb-title">
-          What are you celebrating ?
-        </div>
-        <div id="homepage-what-are-you-celeb-sub-title">
-          Select your party below to start
-        </div>
-
-        <div id="homepage-what-are-you-celeb-slider-wrap">
-          <Slider {...slider01_settings}>
-            <div
-              className="homepage-what-are-you-celeb-slider-slide"
-              id="homepage-what-are-you-celeb-birthday-slide"
-            >
-              <div className="homepage-what-are-you-celeb-slider-slide-title">
-                Birthday
-              </div>
-            </div>
-
-            <div
-              className="homepage-what-are-you-celeb-slider-slide"
-              id="homepage-what-are-you-celeb-babyshower-slide"
-            >
-              <div className="homepage-what-are-you-celeb-slider-slide-title">
-                Baby Shower
-              </div>
-            </div>
-
-            <div
-              className="homepage-what-are-you-celeb-slider-slide"
-              id="homepage-what-are-you-celeb-houseparty-slide"
-            >
-              <div className="homepage-what-are-you-celeb-slider-slide-title">
-                House Party
-              </div>
-            </div>
-
-            <div
-              className="homepage-what-are-you-celeb-slider-slide"
-              id="homepage-what-are-you-celeb-officeparty-slide"
-            >
-              <div className="homepage-what-are-you-celeb-slider-slide-title">
-                Office Party
-              </div>
-            </div>
-
-            <div
-              className="homepage-what-are-you-celeb-slider-slide"
-              id="homepage-what-are-you-celeb-wedding-slide"
-            >
-              <div className="homepage-what-are-you-celeb-slider-slide-title">
-                Saree Function
-              </div>
-            </div>
-          </Slider>
-        </div>
-      </div>
-      {/* what are you celebrating section ends here */}
 
       {/* the party store section starts here */}
 
@@ -524,6 +498,88 @@ export const Home = () => {
       </div> */}
       {/* around the world decoration section ends here */}
 
+      {/* what are you celebrating section starts here */}
+      <div id="homepage-what-are-you-celeb-section-wrap">
+        <div id="homepage-what-are-you-celeb-title">
+          What are you celebrating ?
+        </div>
+        <div id="homepage-what-are-you-celeb-sub-title">
+          Select your party below to start
+        </div>
+
+        <div id="homepage-what-are-you-celeb-slider-wrap">
+          <Slider {...slider01_settings}>
+            <a
+              href="/birthday/prince"
+              className="homepage-what-are-you-celeb-slider-link"
+            >
+              {" "}
+              <div
+                className="homepage-what-are-you-celeb-slider-slide"
+                id="homepage-what-are-you-celeb-birthday-slide"
+              >
+                <div className="homepage-what-are-you-celeb-slider-slide-title">
+                  Birthday
+                </div>
+              </div>
+            </a>
+
+            <a
+              href="/celebrations/Baby Shower"
+              className="homepage-what-are-you-celeb-slider-link"
+            >
+              {" "}
+              <div
+                className="homepage-what-are-you-celeb-slider-slide"
+                id="homepage-what-are-you-celeb-babyshower-slide"
+              >
+                <div className="homepage-what-are-you-celeb-slider-slide-title">
+                  Baby Shower
+                </div>
+              </div>
+            </a>
+
+            <a href="#" className="homepage-what-are-you-celeb-slider-link">
+              <div
+                className="homepage-what-are-you-celeb-slider-slide"
+                id="homepage-what-are-you-celeb-houseparty-slide"
+              >
+                <div className="homepage-what-are-you-celeb-slider-slide-title">
+                  House Party
+                </div>
+              </div>
+            </a>
+
+            <a href="#" className="homepage-what-are-you-celeb-slider-link">
+              {" "}
+              <div
+                className="homepage-what-are-you-celeb-slider-slide"
+                id="homepage-what-are-you-celeb-officeparty-slide"
+              >
+                <div className="homepage-what-are-you-celeb-slider-slide-title">
+                  Office Party
+                </div>
+              </div>{" "}
+            </a>
+
+            <a
+              href="/celebrations/Saree Function"
+              className="homepage-what-are-you-celeb-slider-link"
+            >
+              <div
+                className="homepage-what-are-you-celeb-slider-slide"
+                id="homepage-what-are-you-celeb-wedding-slide"
+              >
+                <div className="homepage-what-are-you-celeb-slider-slide-title">
+                  Saree Function
+                </div>
+              </div>
+            </a>
+          </Slider>
+        </div>
+      </div>
+      {/* what are you celebrating section ends here */}
+
       {/* corporate decor section starts here */}
       <div id="homepage-corporate-decorations-section-wrap">
         <div id="homepage-corporate-decorations-main-headline">
@@ -634,7 +690,7 @@ export const Home = () => {
 
       {/* wedding anniversary section starts here */}
       <div id="homepage-wedding-anniversary-section-wrap">
-      <div id="homepage-wedding-anniversary-main-headline">
+        <div id="homepage-wedding-anniversary-main-headline">
           Wedding Anniversary
         </div>
         <div id="homepage-wedding-anniversary-sub-headline">
@@ -642,7 +698,7 @@ export const Home = () => {
         </div>
         <div id="homepage-wedding-anniversary-packages-section-wrap">
           <div className="homepage-wedding-anniversary-single-package-card-wrap">
-            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon"/>
+            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon" />
             <div className="homepage-wedding-anniversary-single-package-card-image-wrap">
               <img
                 src="./Home-img/silver.jpeg"
@@ -674,7 +730,7 @@ export const Home = () => {
           </div>
 
           <div className="homepage-wedding-anniversary-single-package-card-wrap">
-            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon"/>
+            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon" />
             <div className="homepage-wedding-anniversary-single-package-card-image-wrap">
               <img
                 src="./Home-img/gold.jpg"
@@ -706,7 +762,7 @@ export const Home = () => {
           </div>
 
           <div className="homepage-wedding-anniversary-single-package-card-wrap">
-            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon"/>
+            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon" />
             <div className="homepage-wedding-anniversary-single-package-card-image-wrap">
               <img
                 src="./Home-img/platinum.jpg"
@@ -736,8 +792,6 @@ export const Home = () => {
               Book now
             </button>
           </div>
-
-
         </div>
       </div>
       {/* wedding anniversary section ends here */}

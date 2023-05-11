@@ -24,7 +24,7 @@ export const Footer=()=>{
           <div>
             <div id="footer-main-content-section-logo-wrap">
               <img
-                src="/Navbar-img/logo.png"
+                src="/Navbar-img/partystore.png"
                 alt=""
                 id="footer-main-content-section-logo"
               />

@@ -5,19 +5,45 @@
   display: flex;
   justify-content: space-around;
   padding-top: 40px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
-#homepage-banner-wrap {
-  width: 65%;
+.homepage-banner-wrap {
+  width: 100%;
   height: 450px;
+  /* border: 1px solid red; */
 }
 
-#homepage-banner-image {
+.homepage-banner-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+.homepage-banner-slider-component{
+  width: 65%;
+}
+
+.slick-next:before,
+.slick-prev:before {
+  font-size: 15px !important;
+  line-height: 1 !important;
+  opacity: 0.75 !important;
+  color: #000 !important;
+}
+
+.slick-dots > li > button:before {
+  font-size: 10px !important;
+  color: #000 !important;
+  margin-top: 5px;
+  opacity: 0.6 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white !important;
+  opacity: 1 !important;
+}
+
 
 #homepage-packages-wrap {
   width: 25%;
@@ -37,7 +63,7 @@
   margin-bottom: 0px;
 }
 
-#homepage-packages-list-ul > li {
+#homepage-packages-list-ul > a > li {
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
@@ -49,7 +75,18 @@
   margin-right: 10px;
 }
 
+#homepage-packages-list-ul > a{
+  text-decoration: none;
+}
+
 #homepage-packages-list-ul > :nth-child(1) {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.001em;
+  color: #ffffff;
+  padding: 10px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.42);
   background: #560898;
   margin-left: 0px;
   margin-right: 0px;
@@ -57,7 +94,7 @@
   border: none;
 }
 
-#homepage-packages-list-ul > :nth-child(10) {
+#homepage-packages-list-ul > :nth-child(10) >li {
   border: none;
 }
 
@@ -74,26 +111,26 @@
 }
 
 .homepage-offer-statement-section-text-contents {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 48px;
   letter-spacing: 0.015em;
-  color: #680f5f;
-  text-align: left;
+  color: white;
+  text-align: center;
 }
 
 #homepage-offer-statement-section-offer-text-content {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 600;
   line-height: 48px;
   letter-spacing: 0.001em;
-  color: #ffffff;
+ color: #FFD401;
 }
 
 #homepage-offer-statement-section-text {
   position: absolute;
-  top: 770px;
-  left: 180px;
+  top: 780px;
+  left: 420px;
 }
 
 #homepage-what-are-you-celeb-section-wrap {
@@ -136,10 +173,15 @@
   border-radius: 5px;
   padding-left: 20px;
   box-sizing: border-box;
-  margin-top: 284px;
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 5px;
+  position: relative;
+  top: 283px;
+}
+
+.homepage-what-are-you-celeb-slider-link{
+  text-decoration: none;
 }
 
 #homepage-what-are-you-celeb-birthday-slide {
@@ -192,13 +234,19 @@
   color: black !important;
 } */
 
-.homepage-slider01-slider02-slider-component > .slick-list > div > div {
+.homepage-slider01-slider02-slider-component > .slick-list > div > div{
   width: 240px;
   margin-left: 15px;
+  /* border: 1px solid red; */
+}
+
+#homepage-what-are-you-celeb-slider-wrap > .homepage-slider01-slider02-slider-component > a{
+  text-decoration: none;
 }
 
 #homepage-the-party-store-section-wrap {
-  background: #ffd401;
+  background: #E0EBFC;
+background-blend-mode: normal;
   padding-top: 39px;
   padding-bottom: 60px;
 }
@@ -315,8 +363,8 @@
 #homepage-second-offer-statement-section-offer01-wrap {
   background: url("../bg-img/second-offer-01.png");
   background-repeat: no-repeat;
-  height: 140px;
-  width: 49%;
+  height: 135px;
+  width: 49.5%;
   background-size: cover;
   /* border: 1px solid red; */
 }
@@ -325,15 +373,14 @@
   background: url("../bg-img/second-offer-02.png");
   height: 132px;
   background-repeat: no-repeat;
-  width: 49%;
+  width: 49.5%;
   background-size: cover;
-  border-radius: 5px;
   /* border: 1px solid red; */
 }
 
 #homepage-second-offer-statement-section-wrap {
   display: flex;
-  width: 90%;
+  width: 100%;
   margin: auto;
   margin-top: 35px;
   margin-bottom: 30px;
@@ -593,7 +640,7 @@
   width: 50%;
 }
 
-.slick-next:before,
+/* .slick-next:before,
 .slick-prev:before {
   font-size: 25px !important;
   line-height: 1 !important;
@@ -611,7 +658,7 @@
 .slick-dots li.slick-active button:before {
   color: white !important;
   opacity: 1 !important;
-}
+} */
 
 #homepage-celeb-moments-section-wrap {
   background: #9647c6;
@@ -719,9 +766,10 @@
 }
 
 #homepage-corporate-decorations-section-wrap{
-  background: #FFD401;
+ background: #E6E9FF;
   padding-top: 39px;
   padding-bottom: 60px;
+  margin-top: 24px;
 }
 
 .homepage-corporate-decorations-single-card-wrap{
@@ -907,4 +955,5 @@
   background: #FCE7EE;
   padding-top: 39px;
   padding-bottom: 10px; 
+  margin-top: 24px;
 }

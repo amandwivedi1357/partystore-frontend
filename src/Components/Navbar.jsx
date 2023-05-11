@@ -226,7 +226,9 @@ useEffect(() => {
           <div className="navbar-products-packages-elements">
             Your zinggalas
           </div>
-          <div className="navbar-products-packages-elements">Accessories</div>
+          <div className="navbar-products-packages-elements-partystore-logo">
+          <a href="/products"><img src="/Navbar-img/partystore.png" alt="partystore" /></a>
+          </div>
         </div>
         <div id="navbar-searchbar-wrap">
           <input type="search" placeholder="Search baloons,cakes,Themes etc." />
