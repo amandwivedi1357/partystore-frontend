@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { Home } from "../Components/Home";
 import { Celebrations } from "../Components/Celebrations";
 import { Products } from "../Components/Products";
+import { PartyStoreCategory } from "../Components/PartyStoreCategory";
 import { Birthdays } from "../Components/Birthdays";
 import { SingleProduct } from "../Components/SingleProduct.jsx";
 import { BirthdaySingleProduct } from "../Components/BirthdaySingleProduct.jsx";
@@ -37,6 +38,7 @@ export const MainRoutes = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/register" element={<Register />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/products/:category" element={<PartyStoreCategory />} />
       </Routes>
     </>
   );

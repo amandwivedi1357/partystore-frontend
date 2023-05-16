@@ -1,0 +1,101 @@
+#partystore-product-category-main-headline{
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0.015em;
+  margin-top: 50px;
+}
+
+#partystore-product-category-main-headline>span{
+  color: #707070;
+  font-weight: 500;
+}
+
+.partystore-product-category-single-product-card {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.partystore-product-category-single-product-image-wrap {
+  width: 100%;
+  height: 230px;
+}
+
+.partystore-product-category-single-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#partystore-product-category-products-wrap{
+    display: grid;
+  width: 70%;
+  grid-template-columns: 26% 26% 26%;
+  grid-template-rows: auto;
+  column-gap: 65px;
+  row-gap: 40px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 70px;
+  /* border: 1px solid red; */
+}
+
+.partystore-product-category-single-product-rating {
+  
+}
+
+.partystore-product-category-single-product-title-rating-wrap{
+    display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 5px;
+  padding: 5px;
+}
+
+.partystore-product-category-single-product-title{
+font-family: Nunito;
+font-size: 15px;
+font-weight: 600;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+.partystore-product-category-single-product-price-wrap {
+  font-family: Nunito;
+font-size: 15px;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;
+  margin-left: 5px;
+  padding-left: 5px;
+}
+
+.partystore-product-category-single-product-price-wrap > :nth-child(2) {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  margin-right: 5px;
+  font-weight: 600;
+}
+
+.partystore-product-category-single-product-button-wrap{
+    margin-top: 30px;
+    /* border: 1px solid red; */
+}
+
+.partystore-product-category-single-product-buy-now-button{
+    padding: 12px;
+    background: #0B0197;
+    color: white;
+    width: 50%;
+    border: none;
+}
+
+.partystore-product-category-single-product-cart-button{
+    padding: 12px;
+    color: white;
+    width: 50%;
+    color: #263238A1;
+    border: none;
+}
