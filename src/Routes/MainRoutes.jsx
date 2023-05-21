@@ -6,6 +6,7 @@ import { Products } from "../Components/Products";
 import { PartyStoreCategory } from "../Components/PartyStoreCategory";
 import { Birthdays } from "../Components/Birthdays";
 import { SingleProduct } from "../Components/SingleProduct.jsx";
+import { FestivalSingleProduct } from "../Components/FestivalSingleProduct.jsx";
 import { BirthdaySingleProduct } from "../Components/BirthdaySingleProduct.jsx";
 import { CelebrationPackages } from "../Components/CelebrationPackages";
 import { FestivalPackages } from "../Components/FestivalPackages";
@@ -26,9 +27,10 @@ export const MainRoutes = () => {
           path="/celebrations/:category"
           element={<CelebrationPackages />}
         />
+        <Route path="/festivals/:category" element={<FestivalPackages />} />
         <Route
-          path="/festivals/:category"
-          element={<FestivalPackages />}
+          path="/festivals/:category/:id"
+          element={<FestivalSingleProduct />}
         />
         <Route
           path="/birthday/:theme/:category"

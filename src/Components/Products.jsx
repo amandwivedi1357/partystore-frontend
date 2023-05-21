@@ -21,7 +21,7 @@ export const Products=()=>{
           {productsdata &&
             productsdata.map((product) => {
               return (
-                <a>
+                <a href={`/products/${product.category}`}>
                   <div
                     className="partystore-products-single-category-wrap"
                     key={product._id}

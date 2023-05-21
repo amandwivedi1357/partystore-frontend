@@ -4,26 +4,54 @@ export const FestivalDrop = () => {
   return (
     <div id="navbar-dropdown-festivals-section-wrap">
       <div id="navbar-dropdown-festivals-section-content-row01">
-        <div>Christmas</div>
-        <div>Diwali</div>
-        <div>Dussera</div>
-        <div>Holi</div>
-        <div>Independence Day</div>
-        <div>Janmashtami</div>
+        <a href="/festivals">
+          <div>Christmas</div>
+        </a>
+        <a href="/festivals">
+          <div>Diwali</div>
+        </a>
+        <a href="/festivals">
+          <div>Dussera</div>
+        </a>
+        <a href="/festivals">
+          <div>Holi</div>
+        </a>
+        <a href="/festivals">
+          <div>Independence Day</div>
+        </a>
+        <a href="/festivals">
+          <div>Janmashtami</div>
+        </a>
       </div>
 
       <div id="navbar-dropdown-festivals-section-content-row02">
-        <div>Republic Day</div>
-        <div>Raksha bandhan</div>
-        <div>Ramzan</div>
-        <div>Sankranti</div>
-        <div>New Year</div>
-        <div>Navratri</div>
+        <a href="/festivals">
+          <div>Republic Day</div>
+        </a>
+        <a href="/festivals">
+          <div>Raksha bandhan</div>
+        </a>
+        <a href="/festivals">
+          <div>Ramzan</div>
+        </a>
+        <a href="/festivals">
+          <div>Sankranti</div>
+        </a>
+        <a href="/festivals">
+          <div>New Year</div>
+        </a>
+        <a href="/festivals">
+          <div>Navratri</div>
+        </a>
       </div>
 
       <div id="navbar-dropdown-festivals-section-content-row03">
-        <div>Ugadi</div>
-        <div>Valentine</div>
+        <a href="/festivals">
+          <div>Ugadi</div>
+        </a>
+        <a href="/festivals">
+          <div>Valentine</div>
+        </a>
       </div>
 
       <div id="navbar-dropdown-festivals-section-content-row04">

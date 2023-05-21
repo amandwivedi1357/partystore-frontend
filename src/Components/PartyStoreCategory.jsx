@@ -18,9 +18,9 @@ export const PartyStoreCategory=()=>{
 
     return (
       <div id="partystore-product-category-main-wrapper">
-        <div id="partystore-product-category-main-headline">
-          The party store <span>(Balloons)</span>
-        </div>
+        {categorydata[0] && (<div id="partystore-product-category-main-headline">
+          The party store <span>({categorydata[0].category})</span>
+        </div>)}
 
         <div id="partystore-product-category-products-wrap">
           {categorydata &&

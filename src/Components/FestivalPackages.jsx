@@ -103,7 +103,7 @@ export const FestivalPackages = () => {
                 <div className="celebration-single-package-card-description">
                   {product.description}
                 </div>
-                <a href={`/celebrations/${product.category}/${product._id}`}>
+                <a href={`/festivals/${product.category}/${product._id}`}>
                   <button className="celebration-single-package-card-buy-now-button">
                     Book now
                   </button>
