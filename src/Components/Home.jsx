@@ -7,8 +7,13 @@ import Slider from "react-slick";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import { TiHeartFullOutline } from "react-icons/ti";
+import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
 
 export const Home = () => {
+  
+  var productinfo = null;
+
   var slider01_settings = {
     className: "homepage-slider01-slider02-slider-component",
     dots: false,
@@ -45,14 +50,58 @@ export const Home = () => {
 
   var slider04_settings = {
     className: "homepage-testimonial-section-slider-component",
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
+    autoplay: true,
+    autoplaySpeed: 2500,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     variableWidth: true,
   };
+
+   const { user, isError, isLoading } = useSelector((state) => ({
+     user: state.user,
+     isError: state.isError,
+     isLoading: state.isLoading,
+   }));
+
+ const handleWishlist=(productinfo)=>{
+  if (user) {
+    axios
+      .post(
+        `https://angry-leather-jacket-wasp.cyclic.app/wishlist/${user[0]._id}`,
+        {
+          productName: productinfo.productName,
+          description: productinfo.description,
+          price: productinfo.price,
+          image: productinfo.image,
+        }
+      )
+      .then((res) => console.log(res.data));
+  } 
+   }
+
+   const handleWishlistevent=(e)=>{
+         e.target.style.color="red";
+   }
+
+const handleCart = (productinfo) => {
+  if (user) {
+    axios
+      .post(
+        `https://angry-leather-jacket-wasp.cyclic.app/cart/${user[0]._id}`,
+        {
+          productName: productinfo.productName,
+          description: productinfo.description,
+          price: productinfo.price,
+          image: productinfo.image,
+        }
+      )
+      .then((res) => console.log(res.data));
+  }
+};
 
   return (
     <div id="homepage-main-wrapper">
@@ -62,28 +111,28 @@ export const Home = () => {
         <div id="homepage-packages-wrap">
           <ul id="homepage-packages-list-ul">
             <li>POPULAR PACKAGES</li>
-            <a href="">
-              <li>Around the world theme</li>
+            <a href="/celebrations/Bridal Shower">
+              <li>Bridal Shower</li>
             </a>
             <a href="/celebrations/Baby Arrival">
               <li>Baby arrival</li>
             </a>
-            <a href="/celebrations/Dhoti Function">
-              <li>Dothi Function</li>
+            <a href="/celebrations/Congrats Party">
+              <li>Congrats Party</li>
             </a>
             <a href="/celebrations/House Warming">
               <li>House Warming</li>
             </a>
-            <a href="">
-              <li>Office in house decor</li>
+            <a href="/celebrations/Engagement">
+              <li>Engagement</li>
             </a>
             <a href="/celebrations/Saree Function">
               <li>Saree Function</li>
             </a>
-            <a href="">
-              <li>Showroom Inauguration</li>
+            <a href="/celebrations/Bachelorette party">
+              <li>Bachelorette party</li>
             </a>
-            <a href="">
+            <a href="/products">
               <li>The Party Store</li>
             </a>
             <a href="/celebrations/Wedding Anniversary">
@@ -95,21 +144,28 @@ export const Home = () => {
         <Slider {...slider03_settings}>
           <div className="homepage-banner-wrap">
             <img
-              src="./Home-img/banner.jpeg"
+              src="./Home-img/banner01.jpg"
               alt="banner"
               className="homepage-banner-image"
             />
           </div>
           <div className="homepage-banner-wrap">
             <img
-              src="./Home-img/banner.jpeg"
+              src="./Home-img/banner02.jpeg"
               alt="banner"
               className="homepage-banner-image"
             />
           </div>
           <div className="homepage-banner-wrap">
             <img
-              src="./Home-img/banner.jpeg"
+              src="./Home-img/banner03.jpg"
+              alt="banner"
+              className="homepage-banner-image"
+            />
+          </div>
+          <div className="homepage-banner-wrap">
+            <img
+              src="./Home-img/banner04.jpg"
               alt="banner"
               className="homepage-banner-image"
             />
@@ -590,99 +646,107 @@ export const Home = () => {
         </div>
         <div id="homepage-corporate-decorations-cards-main-wrap">
           <div className="homepage-corporate-decorations-single-card-wrap">
-            <div className="homepage-corporate-decorations-single-card-img-wrap">
-              <img
-                src="https://deowgxgt4vwfe.cloudfront.net/uploads/1634389415_original.jpg"
-                alt=""
-                className="homepage-corporate-decorations-single-card-img"
-              />
-            </div>
+            <a href="/festivals/Navratri">
+              <div className="homepage-corporate-decorations-single-card-img-wrap">
+                <img
+                  src="https://deowgxgt4vwfe.cloudfront.net/uploads/1634389415_original.jpg"
+                  alt=""
+                  className="homepage-corporate-decorations-single-card-img"
+                />
+              </div>
 
-            <div className="homepage-corporate-decorations-single-card-title">
-              Navratri
-            </div>
-            <div className="homepage-corporate-decorations-single-card-rating">
-              <Stack spacing={1}>
-                <Rating name="read-only" value="5" readOnly size="small" />
-              </Stack>
-            </div>
+              <div className="homepage-corporate-decorations-single-card-title">
+                Navratri
+              </div>
+              <div className="homepage-corporate-decorations-single-card-rating">
+                <Stack spacing={1}>
+                  <Rating name="read-only" value="5" readOnly size="small" />
+                </Stack>
+              </div>
 
-            <div className="homepage-corporate-decorations-single-card-description">
-              Like to do things differently? Host A Congrats Party with
-              zinggalas
-            </div>
+              <div className="homepage-corporate-decorations-single-card-description">
+                Like to do things differently? Host A Congrats Party with
+                zinggalas
+              </div>
+            </a>
           </div>
 
           <div className="homepage-corporate-decorations-single-card-wrap">
-            <div className="homepage-corporate-decorations-single-card-img-wrap">
-              <img
-                src="https://deowgxgt4vwfe.cloudfront.net/uploads/1659441807_small.jpg"
-                alt=""
-                className="homepage-corporate-decorations-single-card-img"
-              />
-            </div>
+            <a href="/festivals/Independance Day">
+              <div className="homepage-corporate-decorations-single-card-img-wrap">
+                <img
+                  src="https://www.fnp.com/images/pr/x/v20190122222820/republic-day-decoration_1.jpg"
+                  alt=""
+                  className="homepage-corporate-decorations-single-card-img"
+                />
+              </div>
 
-            <div className="homepage-corporate-decorations-single-card-title">
-              Independance Day
-            </div>
-            <div className="homepage-corporate-decorations-single-card-rating">
-              <Stack spacing={1}>
-                <Rating name="read-only" value="5" readOnly size="small" />
-              </Stack>
-            </div>
+              <div className="homepage-corporate-decorations-single-card-title">
+                Independance Day
+              </div>
+              <div className="homepage-corporate-decorations-single-card-rating">
+                <Stack spacing={1}>
+                  <Rating name="read-only" value="5" readOnly size="small" />
+                </Stack>
+              </div>
 
-            <div className="homepage-corporate-decorations-single-card-description">
-              Like to do things differently? Host A Congrats Party with
-              zinggalas
-            </div>
+              <div className="homepage-corporate-decorations-single-card-description">
+                Like to do things differently? Host A Congrats Party with
+                zinggalas
+              </div>
+            </a>
           </div>
 
           <div className="homepage-corporate-decorations-single-card-wrap">
-            <div className="homepage-corporate-decorations-single-card-img-wrap">
-              <img
-                src="https://i.pinimg.com/originals/5e/16/af/5e16af559821852d24d0ebb80b00fdee.jpg"
-                alt=""
-                className="homepage-corporate-decorations-single-card-img"
-              />
-            </div>
+            <a href="/festivals/Janmashtami">
+              <div className="homepage-corporate-decorations-single-card-img-wrap">
+                <img
+                  src="https://i.pinimg.com/originals/5e/16/af/5e16af559821852d24d0ebb80b00fdee.jpg"
+                  alt=""
+                  className="homepage-corporate-decorations-single-card-img"
+                />
+              </div>
 
-            <div className="homepage-corporate-decorations-single-card-title">
-              Janmashtami
-            </div>
-            <div className="homepage-corporate-decorations-single-card-rating">
-              <Stack spacing={1}>
-                <Rating name="read-only" value="5" readOnly size="small" />
-              </Stack>
-            </div>
+              <div className="homepage-corporate-decorations-single-card-title">
+                Janmashtami
+              </div>
+              <div className="homepage-corporate-decorations-single-card-rating">
+                <Stack spacing={1}>
+                  <Rating name="read-only" value="5" readOnly size="small" />
+                </Stack>
+              </div>
 
-            <div className="homepage-corporate-decorations-single-card-description">
-              Like to do things differently? Host A Congrats Party with
-              zinggalas
-            </div>
+              <div className="homepage-corporate-decorations-single-card-description">
+                Like to do things differently? Host A Congrats Party with
+                zinggalas
+              </div>
+            </a>
           </div>
 
           <div className="homepage-corporate-decorations-single-card-wrap">
-            <div className="homepage-corporate-decorations-single-card-img-wrap">
-              <img
-                src="https://deowgxgt4vwfe.cloudfront.net/uploads/1659441807_small.jpg"
-                alt=""
-                className="homepage-corporate-decorations-single-card-img"
-              />
-            </div>
+            <a href="/festivals/Republic Day">
+              <div className="homepage-corporate-decorations-single-card-img-wrap">
+                <img
+                  src="https://www.fnp.com/images/pr/x/v20190122222820/republic-day-decoration_3.jpg"
+                  alt=""
+                  className="homepage-corporate-decorations-single-card-img"
+                />
+              </div>
 
-            <div className="homepage-corporate-decorations-single-card-title">
-              Republic Day
-            </div>
-            <div className="homepage-corporate-decorations-single-card-rating">
-              <Stack spacing={1}>
-                <Rating name="read-only" value="5" readOnly size="small" />
-              </Stack>
-            </div>
+              <div className="homepage-corporate-decorations-single-card-title">
+                Republic Day
+              </div>
+              <div className="homepage-corporate-decorations-single-card-rating">
+                <Stack spacing={1}>
+                  <Rating name="read-only" value="5" readOnly size="small" />
+                </Stack>
+              </div>
 
-            <div className="homepage-corporate-decorations-single-card-description">
-              Like to do things differently? Host A Congrats Party with
-              zinggalas
-            </div>
+              <div className="homepage-corporate-decorations-single-card-description">
+                Like to do things differently? Host A Congrats Party with
+                zinggalas
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -698,7 +762,21 @@ export const Home = () => {
         </div>
         <div id="homepage-wedding-anniversary-packages-section-wrap">
           <div className="homepage-wedding-anniversary-single-package-card-wrap">
-            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon" />
+            <TiHeartFullOutline
+              className="homepage-wedding-anniversary-single-package-card-wishlist-icon"
+              onClick={(e) =>
+                handleWishlist(
+                  (productinfo = {
+                    productName: "Silver Package",
+                    description:
+                      "Wedding anniversary silver package. zinggalas event planning redefined",
+                    price: 2999,
+                    image: "./Home-img/silver.jpeg",
+                  }),
+                  handleWishlistevent(e)
+                )
+              }
+            />
             <div className="homepage-wedding-anniversary-single-package-card-image-wrap">
               <img
                 src="./Home-img/silver.jpeg"
@@ -724,13 +802,40 @@ export const Home = () => {
               Wedding anniversary silver package. zinggalas event planning
               redefined
             </div>
-            <button className="homepage-wedding-anniversary-single-package-card-buy-now-button">
+            <button
+              className="homepage-wedding-anniversary-single-package-card-buy-now-button"
+              onClick={() =>
+                handleCart(
+                  (productinfo = {
+                    productName: "Silver Package",
+                    description:
+                      "Wedding anniversary silver package. zinggalas event planning redefined",
+                    price: 2999,
+                    image: "./Home-img/silver.jpeg",
+                  })
+                )
+              }
+            >
               Book now
             </button>
           </div>
 
           <div className="homepage-wedding-anniversary-single-package-card-wrap">
-            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon" />
+            <TiHeartFullOutline
+              className="homepage-wedding-anniversary-single-package-card-wishlist-icon"
+              onClick={(e) =>
+                handleWishlist(
+                  (productinfo = {
+                    productName: "Gold Package",
+                    description:
+                      "Wedding anniversary gold package. zinggalas event planning redefined",
+                    price: 5999,
+                    image: "./Home-img/gold.jpg",
+                  }),
+                  handleWishlistevent(e)
+                )
+              }
+            />
             <div className="homepage-wedding-anniversary-single-package-card-image-wrap">
               <img
                 src="./Home-img/gold.jpg"
@@ -756,13 +861,40 @@ export const Home = () => {
               Wedding anniversary gold package. zinggalas event planning
               redefined
             </div>
-            <button className="homepage-wedding-anniversary-single-package-card-buy-now-button">
+            <button
+              className="homepage-wedding-anniversary-single-package-card-buy-now-button"
+              onClick={() =>
+                handleCart(
+                  (productinfo = {
+                    productName: "Gold Package",
+                    description:
+                      "Wedding anniversary gold package. zinggalas event planning redefined",
+                    price: 5999,
+                    image: "./Home-img/gold.jpg",
+                  })
+                )
+              }
+            >
               Book now
             </button>
           </div>
 
           <div className="homepage-wedding-anniversary-single-package-card-wrap">
-            <TiHeartFullOutline className="homepage-wedding-anniversary-single-package-card-wishlist-icon" />
+            <TiHeartFullOutline
+              className="homepage-wedding-anniversary-single-package-card-wishlist-icon"
+              onClick={(e) =>
+                handleWishlist(
+                  (productinfo = {
+                    productName: "Platinum Package",
+                    description:
+                      "Wedding anniversary platinum package. zinggalas event planning redefined",
+                    price: 8499,
+                    image: "./Home-img/platinum.jpg",
+                  }),
+                  handleWishlistevent(e)
+                )
+              }
+            />
             <div className="homepage-wedding-anniversary-single-package-card-image-wrap">
               <img
                 src="./Home-img/platinum.jpg"
@@ -785,10 +917,23 @@ export const Home = () => {
               <span>8499</span>
             </div>
             <div className="homepage-wedding-anniversary-single-package-card-description">
-              Wedding anniversary silver package. zinggalas event planning
+              Wedding anniversary plat package. zinggalas event planning
               redefined
             </div>
-            <button className="homepage-wedding-anniversary-single-package-card-buy-now-button">
+            <button
+              className="homepage-wedding-anniversary-single-package-card-buy-now-button"
+              onClick={() =>
+                handleCart(
+                  (productinfo = {
+                    productName: "Platinum Package",
+                    description:
+                      "Wedding anniversary platinum package. zinggalas event planning redefined",
+                    price: 8499,
+                    image: "./Home-img/platinum.jpg",
+                  })
+                )
+              }
+            >
               Book now
             </button>
           </div>
@@ -816,20 +961,22 @@ export const Home = () => {
                   </Stack>
                 </div>
                 <div className="homepage-testimonial-section-slide-client-title">
-                  “Lorem ipsum dolor sit”
+                  Dr. Tejasvi
                 </div>
                 <div className="homepage-testimonial-section-slide-client-description">
-                  Lorem ipsum dolor sit amet consectetur. Non eget nibh{" "}
+                  Had an amazing experience!! Celebrating my first wedding
+                  anniversary with "zinggalas" is a beautiful experience
+                  🔥🔥,thank you Vikram.
                 </div>
               </div>
 
-              <div className="homepage-testimonial-section-slide-client-img-wrap">
+              {/* <div className="homepage-testimonial-section-slide-client-img-wrap">
                 <img
                   src="./Home-img/home-testimonial-client.png"
                   alt=""
                   className="homepage-testimonial-section-slide-client-img"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -849,20 +996,25 @@ export const Home = () => {
                   </Stack>
                 </div>
                 <div className="homepage-testimonial-section-slide-client-title">
-                  “Lorem ipsum dolor sit”
+                  Anthony Vipin Das
                 </div>
                 <div className="homepage-testimonial-section-slide-client-description">
-                  Lorem ipsum dolor sit amet consectetur. Non eget nibh{" "}
+                  This store truly lives up to its name with its stunning party
+                  collection. Vikram is an event manager with decades of
+                  experience and personally helps you create unique personalized
+                  plans for your celebrations. A visit to THE PARTY STORE is
+                  highly recommended and cheers to creating memories of a
+                  lifetime for your loved ones! 🎉
                 </div>
               </div>
 
-              <div className="homepage-testimonial-section-slide-client-img-wrap">
+              {/* <div className="homepage-testimonial-section-slide-client-img-wrap">
                 <img
                   src="./Home-img/home-testimonial-client.png"
                   alt=""
                   className="homepage-testimonial-section-slide-client-img"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </Slider>

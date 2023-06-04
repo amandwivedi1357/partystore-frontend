@@ -30,8 +30,8 @@
   color: #680f5f;
 }
 
-#navbar-second-section-logo-wrap {
-  width: 30%;
+#navbar-second-section-logo-wrap>div {
+  width: 80%;
   height: 90px;
   margin-right: 60px;
 }

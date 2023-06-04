@@ -9,7 +9,7 @@ export const Festivals = () => {
   const [festivaldata, setFestivalData] = useState([]);
 
   useEffect(() => {
-    axios(`http://localhost:5000/festival`)
+    axios(`https://angry-leather-jacket-wasp.cyclic.app/festival`)
       .then((res) => setFestivalData(res.data))
       .catch((err) => console.log(err));
   }, []);

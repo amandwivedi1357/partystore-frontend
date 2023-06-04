@@ -123,13 +123,15 @@ useEffect(() => {
           <div>Blog</div>
           <div>FAQ’s</div>
         </div>
-        <div id="navbar-second-section-logo-wrap">
-          <img
-            src="/Navbar-img/logo.png"
-            alt="logo"
-            id="navbar-second-section-logo"
-          />
-        </div>
+        <a href="/" id="navbar-second-section-logo-wrap">
+          <div >
+            <img
+              src="/Navbar-img/logo.png"
+              alt="logo"
+              id="navbar-second-section-logo"
+            />
+          </div>
+        </a>
         <div id="navbar-second-section-user-details-wrap">
           {/*<div id="navbar-second-section-user-logo-wrap">
             <img
@@ -227,7 +229,9 @@ useEffect(() => {
             Your zinggalas
           </div>
           <div className="navbar-products-packages-elements-partystore-logo">
-          <a href="/products"><img src="/Navbar-img/partystore.png" alt="partystore" /></a>
+            <a href="/products">
+              <img src="/Navbar-img/partystore.png" alt="partystore" />
+            </a>
           </div>
         </div>
         <div id="navbar-searchbar-wrap">

@@ -5,48 +5,48 @@ import { TiHeartFullOutline } from "react-icons/ti";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getWishlistData } from "../Redux/actions";
 
 export const CelebrationPackages = () => {
+  let { category } = useParams();
+  const [categorydata, setCategorydata] = useState([]);
+  var productinfo = null;
 
-   let { category } = useParams();
-   const [categorydata, setCategorydata] = useState([]);
-  var productinfo=null;
-
-   const { user, isError, isLoading } = useSelector((state) => ({
+  const { user, isError, isLoading } = useSelector((state) => ({
     user: state.user,
     isError: state.isError,
     isLoading: state.isLoading,
   }));
 
-   useEffect(() => {
-     axios(`https://angry-leather-jacket-wasp.cyclic.app/celebration/${category}`)
-       .then((res) => setCategorydata(res.data))
-       .catch((err) => console.log(err));
-   }, [category]);
-   
+  useEffect(() => {
+    axios(
+      `https://angry-leather-jacket-wasp.cyclic.app/celebration/${category}`
+    )
+      .then((res) => setCategorydata(res.data))
+      .catch((err) => console.log(err));
+  }, [category]);
 
-   const handleWishlist=(productinfo)=>{
-  if (user) {
-    axios
-      .post(
-        `https://angry-leather-jacket-wasp.cyclic.app/wishlist/${user[0]._id}`,
-        {
-          productName: productinfo.productName,
-          description: productinfo.description,
-          price: productinfo.price,
-          image: productinfo.image,
-        }
-      )
-      .then((res) => console.log(res.data));
-  } 
-   }
+  const handleWishlist = (productinfo) => {
+    if (user) {
+      axios
+        .post(
+          `https://angry-leather-jacket-wasp.cyclic.app/wishlist/${user[0]._id}`,
+          {
+            productName: productinfo.productName,
+            description: productinfo.description,
+            price: productinfo.price,
+            image: productinfo.image,
+          }
+        )
+        .then((res) => console.log(res.data));
+    }
+  };
 
-   const handleWishlistevent=(e)=>{
-         e.target.style.color="red";
-   }
-   
+  const handleWishlistevent = (e) => {
+    e.target.style.color = "red";
+  };
+
   return (
     <div id="celebration-packages-main-wrapper">
       <>
@@ -66,12 +66,13 @@ export const CelebrationPackages = () => {
                   id="celebration-single-package-card-wishlist-icon"
                   onClick={(e) =>
                     handleWishlist(
-                      (productinfo={
-                        productName:product.package,
+                      (productinfo = {
+                        productName: product.package,
                         description: product.description,
                         price: product.price,
                         image: product.thumbnail,
-                      }),handleWishlistevent(e)
+                      }),
+                      handleWishlistevent(e)
                     )
                   }
                 />

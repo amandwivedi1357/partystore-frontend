@@ -20,7 +20,7 @@ export const FestivalPackages = () => {
   }));
 
   useEffect(() => {
-    axios(`http://localhost:5000/festival/${category}`)
+    axios(`https://angry-leather-jacket-wasp.cyclic.app/festival/${category}`)
       .then((res) => setCategorydata(res.data))
       .catch((err) => console.log(err));
   }, [category]);
