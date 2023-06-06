@@ -34,6 +34,17 @@ export const Home = () => {
     slidesToScroll: 2,
     arrows: true,
     variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+        },
+      },
+    ],
   };
 
   var slider03_settings = {

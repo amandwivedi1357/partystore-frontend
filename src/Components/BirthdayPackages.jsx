@@ -48,22 +48,22 @@ export const BirthdayPackages = () => {
   };
 
   return (
-    <div id="celebration-packages-main-wrapper">
+    <div id="birthday-packages-main-wrapper">
       <>
         {categorydata[0] && (
-          <div id="celebration-packages-main-headline">
+          <div id="birthday-packages-main-headline">
             All Packages <span>({categorydata[0].category})</span>
           </div>
         )}
       </>
 
-      <div id="celebration-packages-section-wrap">
+      <div id="birthday-packages-section-wrap">
         {categorydata &&
           categorydata.map((product) => {
             return (
-              <div className="celebration-single-package-card-wrap">
+              <div className="birthday-single-package-card-wrap">
                 <TiHeartFullOutline
-                  id="celebration-single-package-card-wishlist-icon"
+                  id="birthday-single-package-card-wishlist-icon"
                   onClick={(e) =>
                     handleWishlist(
                       (productinfo = {
@@ -76,18 +76,18 @@ export const BirthdayPackages = () => {
                     )
                   }
                 />
-                <div className="celebration-single-package-card-image-wrap">
+                <div className="birthday-single-package-card-image-wrap">
                   <img
                     src={product.thumbnail}
                     alt=""
-                    className="celebration-single-package-card-image"
+                    className="birthday-single-package-card-image"
                   />
                 </div>
-                <div className="celebration-single-package-card-title-rating-wrap">
-                  <div className="celebration-single-package-card-title">
+                <div className="birthday-single-package-card-title-rating-wrap">
+                  <div className="birthday-single-package-card-title">
                     {product.package}
                   </div>
-                  <div className="celebration-single-package-card-rating">
+                  <div className="birthday-single-package-card-rating">
                     <Stack spacing={1}>
                       <Rating
                         name="read-only"
@@ -98,17 +98,17 @@ export const BirthdayPackages = () => {
                     </Stack>
                   </div>
                 </div>
-                <div className="celebration-single-package-card-price">
+                <div className="birthday-single-package-card-price">
                   <span>₹</span>
                   <span>{product.price}</span>
                 </div>
-                <div className="celebration-single-package-card-description">
+                <div className="birthday-single-package-card-description">
                   {product.description}
                 </div>
                 <a
                   href={`/birthday/${theme}/${product.category}/${product._id}`}
                 >
-                  <button className="celebration-single-package-card-buy-now-button">
+                  <button className="birthday-single-package-card-buy-now-button">
                     Book now
                   </button>
                 </a>

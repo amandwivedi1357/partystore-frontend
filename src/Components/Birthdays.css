@@ -1,11 +1,11 @@
-#celebration-categories-main-wrapper {
+#birthday-categories-main-wrapper {
   width: 88%;
   margin: auto;
   margin-top: 50px;
   margin-bottom: 60px;
 }
 
-.celebration-main-headline {
+.birthday-main-headline {
   font-style: normal;
   font-weight: 600;
   font-size: 22px;
@@ -14,7 +14,7 @@
   text-align: center;
 }
 
-.celebration-categories-wrap {
+.birthday-categories-wrap {
   display: grid;
   width: 100%;
   grid-template-columns: 22.65% 22.65% 22.65% 22.65%;
@@ -25,11 +25,11 @@
   margin-top: 40px;
 }
 
-.celebration-categories-wrap>a{
+.birthday-categories-wrap>a{
   text-decoration: none;
 }
 
-.celebration-single-category-wrap {
+.birthday-single-category-wrap {
   padding: 5px;
   border: 0.5px solid rgba(112, 112, 112, 0.37);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
@@ -37,24 +37,24 @@
   padding-bottom: 15px;
 }
 
-.celebration-single-category-img-wrap {
+.birthday-single-category-img-wrap {
   width: 100%;
   height: 240px;
 }
 
-.celebration-single-category-img {
+.birthday-single-category-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.celebration-single-category-rating {
+.birthday-single-category-rating {
   width: 40%;
   margin: auto;
   margin-top: 5px;
 }
 
-.celebration-single-category-title {
+.birthday-single-category-title {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -63,7 +63,7 @@
   margin-top: 8px;
 }
 
-.celebration-single-category-description {
+.birthday-single-category-description {
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
@@ -81,4 +81,57 @@
   color:#707070;
   font-weight: 500;
   font-size: 20px;
+}
+
+@media screen and (max-width:480px) {
+
+ .birthday-categories-wrap {
+  /* display: grid;
+  width: 100%; */
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  column-gap: 20px;
+  row-gap: 25px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.birthday-single-category-img-wrap {
+  width: 100%;
+  height: 180px;
+}
+
+.birthday-single-category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.birthday-single-category-rating {
+  width: 40%;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.birthday-single-category-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 27px;
+  letter-spacing: 0.001em;
+  margin-top: 8px;
+}
+
+.birthday-single-category-description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 20px;
+  letter-spacing: 0.001em;
+  text-align: center;
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.65);
+  margin-top: 15px;
+}
+
 }

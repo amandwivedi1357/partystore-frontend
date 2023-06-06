@@ -960,3 +960,163 @@ background-blend-mode: normal;
   padding-bottom: 10px; 
   margin-top: 24px;
 }
+
+
+@media screen and (max-width:480px) {
+
+#homepage-packages-wrap{
+  display: none;
+}
+
+.homepage-banner-slider-component{
+  width: 100%;
+}
+
+.homepage-banner-wrap {
+  width: 98%;
+  height: 300px;
+}
+
+#homepage-packages-and-banner-wrap {
+  background: none;
+  margin-top: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.slick-dots > li > button:before {
+  font-size: 12px !important;
+  margin-top: -35px;
+}
+
+#homepage-offer-statement-section-wrap {
+  width: 100%;
+  height: 90px;
+  margin-top: 10px;
+}
+
+#homepage-offer-statement-section-wrap > img {
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+.homepage-offer-statement-section-text-contents {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.015em;
+  color: white;
+  text-align: center;
+}
+
+#homepage-offer-statement-section-offer-text-content {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0.001em;
+ color: #FFD401;
+}
+
+#homepage-offer-statement-section-text {
+  position: absolute;
+  top: 445px;
+  left: 65px;
+}
+
+#homepage-the-party-store-section-headline {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0.015em;
+}
+
+#homepage-the-party-store-section-sub-headline {
+  width: 75%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.015em;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.homepage-slider01-slider02-slider-component > .slick-list > div > div{
+  width: 320px;
+  margin-left: 20px;
+  /* border: 1px solid red; */
+}
+
+#homepage-the-party-store-section-wrap {
+  padding-bottom: 60px;
+}
+
+.homepage-slider01-slider02-slider-component >.slick-dots > li > button:before {
+  font-size: 12px !important;
+  margin-top: 15px;
+}
+
+#homepage-second-offer-statement-section-wrap {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-top: 15px;
+}
+
+#homepage-second-offer-statement-section-offer01-wrap {
+  background: url("../bg-img/second-offer-01.png");
+  background-repeat: no-repeat;
+  height: 90px;
+  width: 95%;
+  margin: auto;
+  background-size: contain;
+}
+
+#homepage-second-offer-statement-section-offer02-wrap {
+  background: url("../bg-img/second-offer-02.png");
+  height: 100px;
+  background-repeat: no-repeat;
+  width: 95%;
+  margin: auto;
+  background-size: contain;
+  margin-top: -20px;
+}
+
+#homepage-second-offer-statement-section-offer01-text01 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.015em;
+  color: white;
+   padding-top: 20px;
+  margin-left: 30px;
+}
+
+#homepage-second-offer-statement-section-offer01-text02 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0.001em;
+  color: #ffd401;
+  margin-right: 40px;
+}
+
+#homepage-second-offer-statement-section-offer02-text01 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.015em;
+  margin-top: 35px;
+  margin-left: 120px;
+}
+
+#homepage-second-offer-statement-section-offer02-text02 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0.001em;
+  color: #ac0475;
+  margin-right: 10px;
+}
+
+}

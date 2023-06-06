@@ -108,3 +108,12 @@
   font-size: 25px;
   cursor: pointer;
 }
+
+@media screen and (max-width:480px) {
+#celebration-packages-section-wrap {
+  width: 80%;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+}
+
+}

@@ -1,4 +1,4 @@
-#celebration-packages-section-wrap {
+#birthday-packages-section-wrap {
   display: grid;
   width: 70%;
   grid-template-columns: 30% 30% 30%;
@@ -11,7 +11,7 @@
   /* border: 1px solid red; */
 }
 
-#celebration-packages-main-headline {
+#birthday-packages-main-headline {
   font-size: 22px;
   font-weight: 600;
   line-height: 36px;
@@ -19,39 +19,39 @@
   margin-top: 50px;
 }
 
-#celebration-packages-main-headline>span{
+#birthday-packages-main-headline>span{
   color: #707070;
   font-weight: 500;
 }
 
-.celebration-single-package-card-wrap {
+.birthday-single-package-card-wrap {
   padding: 5px;
   border: 0.5px solid rgba(112, 112, 112, 0.37);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
   position: relative;
 }
 
-.celebration-single-package-card-image-wrap {
+.birthday-single-package-card-image-wrap {
   width: 100%;
   height: 200px;
   background:#36454F;
 }
 
-.celebration-single-package-card-image {
+.birthday-single-package-card-image {
   width: 60%;
   height: 60%;
   margin-top: 40px;
   object-fit: contain;
 }
 
-.celebration-single-package-card-title-rating-wrap {
+.birthday-single-package-card-title-rating-wrap {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   margin-left: 5px;
 }
 
-.celebration-single-package-card-title {
+.birthday-single-package-card-title {
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -59,11 +59,11 @@
   letter-spacing: 0.001em;
 }
 
-.celebration-single-package-card-rating {
+.birthday-single-package-card-rating {
   margin-top: 5px;
 }
 
-.celebration-single-package-card-price {
+.birthday-single-package-card-price {
   font-size: 16px;
   font-weight: 600;
   line-height: 30px;
@@ -72,13 +72,13 @@
   margin-left: 5px;
 }
 
-.celebration-single-package-card-price > :nth-child(1) {
+.birthday-single-package-card-price > :nth-child(1) {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   margin-right: 5px;
   font-weight: 600;
 }
 
-.celebration-single-package-card-description {
+.birthday-single-package-card-description {
   font-size: 13px;
   font-weight: 500;
   line-height: 20px;
@@ -89,7 +89,7 @@
   margin-left: 5px;
 }
 
-.celebration-single-package-card-buy-now-button {
+.birthday-single-package-card-buy-now-button {
   background-color: #0a0196;
   color: white;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
@@ -100,11 +100,20 @@
   margin-bottom: 5px;
 }
 
-#celebration-single-package-card-wishlist-icon{
+#birthday-single-package-card-wishlist-icon{
   position: absolute;
   color: white;
   right: 5%;
   top: 3%;
   font-size: 25px;
   cursor: pointer;
+}
+
+@media screen and (max-width:480px) {
+#birthday-packages-section-wrap {
+  width: 80%;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+}
+
 }

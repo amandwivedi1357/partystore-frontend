@@ -29,11 +29,11 @@ export const Cart = ({ cartToggleClose }) => {
           <div id="cart-popup-header-wrap">
             <BiArrowBack onClick={cartToggleClose} />
             <div>Cart</div>
-            {cart!=null && <div>{cart.cartItems.length}</div>}
+            {cart!==null && cart.cartItems &&<div>{cart.cartItems.length}</div>}
             <div>View Wishlist</div>
           </div>
           <div id="cart-products-main-wrapper">
-            {cart!=null &&
+            {cart!=null && cart.cartItems &&
               cart.cartItems.map((product) => {
                 return (
                   <div className="cart-product-wrap">
@@ -74,7 +74,7 @@ export const Cart = ({ cartToggleClose }) => {
           <div className="cart-total-pay-wrap">
             <div>Price Details</div>
             <div className="cart-total-pay-wrap-products-quantity-price-wrap">
-              <div>Cart (MRP {cart.cartItems.length} items)</div>
+             {cart!=null && cart.cartItems && <div>Cart (MRP {cart.cartItems.length} items)</div>}
               <div>
                 <span>₹</span>2999
               </div>

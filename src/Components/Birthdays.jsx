@@ -18,32 +18,32 @@ export const Birthdays = () => {
   }, []);
 
   return (
-    <div id="celebration-categories-main-wrapper">
-      <div className="celebration-main-headline">
+    <div id="birthday-categories-main-wrapper">
+      <div className="birthday-main-headline">
         {theme[0].toUpperCase() + theme.slice(1)} <span id="birthday-main-headline-themes-title">(Themes)</span>
       </div>
 
-      <div className="celebration-categories-wrap">
+      <div className="birthday-categories-wrap">
         {birthdaydata &&
           birthdaydata.map((product) => {
             return (
               <a href={`/birthday/${theme}/${product.category}`}>
                 <div
-                  className="celebration-single-category-wrap"
+                  className="birthday-single-category-wrap"
                   key={product._id}
                 >
-                  <div className="celebration-single-category-img-wrap">
+                  <div className="birthday-single-category-img-wrap">
                     <img
                       src={product.image}
                       alt=""
-                      className="celebration-single-category-img"
+                      className="birthday-single-category-img"
                     />
                   </div>
 
-                  <div className="celebration-single-category-title">
+                  <div className="birthday-single-category-title">
                     {product.category}
                   </div>
-                  <div className="celebration-single-category-rating">
+                  <div className="birthday-single-category-rating">
                     <Stack spacing={1}>
                       <Rating
                         name="read-only"
@@ -54,7 +54,7 @@ export const Birthdays = () => {
                     </Stack>
                   </div>
 
-                  <div className="celebration-single-category-description">
+                  <div className="birthday-single-category-description">
                     {product.description}
                   </div>
                 </div>
