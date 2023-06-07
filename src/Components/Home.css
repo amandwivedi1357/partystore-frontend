@@ -1025,7 +1025,7 @@ background-blend-mode: normal;
 }
 
 #homepage-the-party-store-section-headline {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 48px;
   letter-spacing: 0.015em;
@@ -1033,7 +1033,7 @@ background-blend-mode: normal;
 
 #homepage-the-party-store-section-sub-headline {
   width: 75%;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 30px;
   letter-spacing: 0.015em;
@@ -1041,14 +1041,22 @@ background-blend-mode: normal;
   margin-top: 5px;
 }
 
+.homepage-slider01-slider02-slider-component{
+  width: 330px;
+}
+
 .homepage-slider01-slider02-slider-component > .slick-list > div > div{
-  width: 320px;
+  width: 310px;
   margin-left: 20px;
   /* border: 1px solid red; */
 }
 
 #homepage-the-party-store-section-wrap {
   padding-bottom: 60px;
+}
+
+#homepage-the-party-store-section-slider-wrap{
+  width: 85%;
 }
 
 .homepage-slider01-slider02-slider-component >.slick-dots > li > button:before {
@@ -1083,7 +1091,7 @@ background-blend-mode: normal;
 }
 
 #homepage-second-offer-statement-section-offer01-text01 {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.015em;
@@ -1093,7 +1101,7 @@ background-blend-mode: normal;
 }
 
 #homepage-second-offer-statement-section-offer01-text02 {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 25px;
   letter-spacing: 0.001em;
@@ -1102,21 +1110,88 @@ background-blend-mode: normal;
 }
 
 #homepage-second-offer-statement-section-offer02-text01 {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 20px;
   letter-spacing: 0.015em;
-  margin-top: 35px;
-  margin-left: 120px;
+  margin-top: 20px;
+  padding-top: 20px;
+  margin-left: 60px;
 }
 
 #homepage-second-offer-statement-section-offer02-text02 {
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
-  line-height: 36px;
+  line-height: 25px;
   letter-spacing: 0.001em;
   color: #ac0475;
-  margin-right: 10px;
+  margin-right: 20px;
+}
+
+#homepage-what-are-you-celeb-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0.015em;
+}
+
+#homepage-what-are-you-celeb-sub-title {
+  width: 75%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.015em;
+  margin: auto;
+  margin-top: 5px;
+}
+
+.homepage-slider01-slider02-slider-component > .slick-list > div > div{
+  width: 280px;
+  margin-left: 15px;
+  /* border: 1px solid red; */
+}
+
+.homepage-slider01-slider02-slider-component{
+  /* border: 1px solid red; */
+  width: 100%;
+}
+
+#homepage-what-are-you-celeb-section-wrap {
+  margin-top: 20px;
+  padding-top: 39px;
+  padding-bottom: 60px;
+}
+
+#homepage-corporate-decorations-cards-main-wrap{
+  width: 89%;
+  height: 350px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+#homepage-wedding-anniversary-packages-section-wrap {
+  width: 90%;
+  grid-template-columns: 100%;
+  column-gap: 60px;
+  row-gap: 40px;
+  /* border: 1px solid red; */
+}
+
+#homepage-wedding-anniversary-main-headline {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 0.015em;
+}
+
+#homepage-wedding-anniversary-sub-headline {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.015em;
+  margin-top: 5px;
 }
 
 }
