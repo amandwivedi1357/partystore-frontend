@@ -350,3 +350,50 @@
   border-radius: 3px;
   cursor: pointer;
 }
+
+@media screen and (max-width:480px) {
+
+#singleproduct-main-wrapper {
+  display: block;
+}
+
+#singleproduct-image-content-wrap {
+  width: 90%;
+  margin: auto;
+}
+
+#singleproduct-product-details-wrap {
+  width: 90%;
+}
+
+#singleproduct-product-details-product-description {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.005em;
+  color: #707070;
+  width: 80%;
+  margin-top: 10px;
+}
+#singleproduct-product-details-price-and-rental-days-wrap {
+  width: 80%;
+}
+
+#singleproduct-product-details-rental-days-wrap {
+  width: 60%;
+}
+
+#singleproduct-product-details-buttons-wrap {
+  width: 100%;
+}
+
+#singleproduct-product-details-inclusions-exclusions-wrap {
+  display: block;
+}
+
+#singleproduct-product-details-exclusions-headline {
+  margin-top: 30px;
+}
+
+}

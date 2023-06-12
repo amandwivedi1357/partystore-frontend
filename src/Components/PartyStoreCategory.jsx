@@ -11,7 +11,7 @@ export const PartyStoreCategory=()=>{
     const [categorydata, setCategorydata] = useState([]);
 
    useEffect(() => {
-  axios(`http://localhost:5000/products/${category}`)
+  axios(`http://angry-leather-jacket-wasp.cyclic.app/products/${category}`)
     .then((res) => setCategorydata(res.data))
     .catch((err) => console.log(err));
 }, [category]);

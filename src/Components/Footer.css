@@ -177,3 +177,36 @@
   margin-right: 8px;
   font-size: 20px;
 }
+
+@media screen and (max-width: 480px) {
+  #footer-email-section-get-started-title {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0.001em;
+  }
+
+  #footer-email-section-main-title {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.0025em;
+    color: #ffffff;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+#footer-email-section-input-wrap {
+  width: 70%;
+  margin: auto;
+  background-color: #ffffff;
+  margin-top: 15px;
+  border-radius: 5px;
+}
+
+#footer-email-section-wrap {
+  padding-top: 25px;
+}
+
+}

@@ -287,6 +287,7 @@ useEffect(() => {
             id="navbar-second-section-cart-logo"
           />
         </div>
+        {cartToggle && <Cart cartToggleClose={cartToggleClose} />}
       </div>
     </>
   );
